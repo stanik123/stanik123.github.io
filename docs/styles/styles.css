@@ -1,0 +1,491 @@
+@charset "UTF-8";
+@import url("fonts.css");
+@import url("nav.css");
+* {	margin: 0; padding: 0; box-sizing: border-box; }
+
+/*******************************
+
+	Styles for StanleyRecipes
+			by stanik
+
+********************************/
+
+/**********
+ * Colors *
+ **********/
+:root {
+	--green: hsl(160, 80%, 40%);
+	--dark-green: hsl(160, 80%, 30%);
+	--BG: #e8eaed;
+	--text: #202124;
+	--border: #5f6368;
+
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--green: hsl(160, 80%, 20%);
+		--dark-green: hsl(160, 80%, 10%);
+		--BG: #202124;
+		--text: #e8eaed;
+	}
+}
+:root {
+	font-family: BloggerSans, sans-serif;
+	font-weight: 400;
+	background: var(--BG);
+	color: var(--text);
+}
+body, main, main > header, article, section, footer { background: var(--BG); }
+
+/**********
+ * Header *
+ **********/
+body {
+	width: 100vw;
+	height: 100vh; }
+main {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto; }
+main, header, article, section, footer { width: 100%; }
+article, section { flex-grow: 1; padding: 2em; }
+
+header img {
+	width: 100%;
+	max-height: 100vh;
+	object-fit: cover;
+}
+header { position: relative; }
+h1 {
+	position: absolute;
+    left: 2em; bottom: 2em;
+    font-family: PatrickHandSC, sans-serif;
+    background: rgba(0, 0, 0, 0.9);
+    padding: .5rem 4rem;
+    border-radius: 1em 3em;
+	font-size: 3em; }
+@media (orientation: portrait) { h1 span { display: none; } }
+@media (min-width: 1200px) { h1 { font-size: 5em; } }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Obsah *
+h2 {
+	margin: 3rem 0 1rem;
+}
+p {
+	margin: .5rem 0;
+}
+
+main table.left { float: left; }
+main table {
+	float: right;
+	margin: 1rem;
+	background: var(--green);
+	border-radius: 1rem
+}
+main table tr:nth-child(even) {
+	background: var(--dark-green);
+}
+main table tr td, main table tr th {
+	padding: .5rem 2rem;
+	vertical-align: center;
+	text-align: center;
+}*/
+
+
+
+
+/*************
+ * SCROLLBAR *
+ *************/
+::-webkit-scrollbar { width: .5em; }
+::-webkit-scrollbar-track {
+	border: .3em solid var(--BG);
+	border-right: none;
+	border-radius: .1em;
+	background-color: var(--border); }
+::-webkit-scrollbar-thumb {
+	border-bottom-left-radius: .5em;
+	border-top-left-radius: .5em;
+	background-color: var(--green); }
+::-webkit-scrollbar-thumb:hover { background-color: var(--dark-green); }
+/*Firefox alternate*/
+:root {
+	scrollbar-color: var(--green) var(--border) ;
+	scrollbar-width: .5rem; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#langSelect {display:none;}
+
+nav a {
+	display: block;
+	text-decoration: none;
+	color: var(--text);
+}
+nav a img {
+	display: block;
+	height: 4rem;
+	padding: 1rem 0;
+	margin: 0 auto;
+}
+@media (orientation: portrait) {
+	nav, nav a {
+		height: 4rem;
+	}
+	#navBar {
+		width: 100vw;
+		display: flex;
+	}
+	#mainSelect {
+		flex-basis: 80%;
+		display: flex;
+	}
+	#mainSelect a {
+		flex-basis: 25%;
+	}
+	#langSelect {
+		flex-basis: 20%;
+		position: relative
+	}
+	#langSelect a:not(:first-child) {
+		display: none;
+		background: var(--green);
+	}
+	#langSelect:hover a {
+		display: block;
+		position: absolute;
+		width: 100%
+	}
+	#langSelect a:nth-child(2) { top: 0; }
+	#langSelect a:nth-child(2) { top: -4rem; }
+	#langSelect a:nth-child(3) { top: -8rem; }
+	#langSelect a:nth-child(4) { top: -12rem; border-top-left-radius: .5rem; }
+	nav button { display: none; }
+	nav a {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		text-align: center;
+	}
+	nav a i {
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+	}
+	#langSelect a p {
+		display: none;
+	}
+}
+@media (orientation: landscape) {
+	nav a {
+		height: 3.5rem; width: 3.5rem;
+		margin: .25rem;
+		background: rgba(0, 0, 0, 0.2);
+		border-radius: .5rem;
+	}
+	#navBar {
+		width: 4rem;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	#mainSelect {
+		flex-basis: 16rem;
+		display: flex;
+		flex-direction: column;
+	}
+	#mainSelect a {
+		flex-basis: 25%;
+	}
+	#langSelect {
+		flex-basis: 19rem;
+		position: relative
+	}
+	nav button {
+		border: 0;
+		height: 2rem;
+		width: 100%;
+	}
+	nav a {
+		font-size: 1.5rem;
+		line-height: 3.5rem;
+		text-align: center;
+	}
+	nav a p {
+		display: none;
+	}
+	nav a img {
+		height: 3rem;
+		padding: .5rem 0;
+	}
+	
+	#navBar:hover {
+		width: 8rem;
+	}
+	#navBar:hover nav a {
+		width: 7rem;
+		display: flex;
+	}
+	#navBar:hover nav a p {
+		display: inline;
+		font-size: 1rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#mainSelect a {
+		flex-basis: 25%;
+		text-decoration: none;
+		
+		color: var(--text);
+		font-size: 1rem;
+		line-height: 1.5rem;
+		text-align: center;
+	}
+	#mainSelect a i {
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+	}
+
+
+@media (orientation: portrait) {
+	#navBar {
+		width: 100vw;
+	}
+	nav, nav a {
+		height: 4rem;
+	}
+	nav a {
+		display: block;
+	}
+	#mainSelect {
+		display: flex;
+	}
+	
+	#mainSelect a {
+		flex-basis: 25%;
+		text-decoration: none;
+	}
+	nav a img {
+		height: 4rem;
+		display: block;
+		margin: 0 auto;
+		padding: 1rem 0;
+	}
+	
+	
+	#mainSelect {
+		flex-basis: 80%;
+	}
+	#langSelect {
+		flex-basis: 20%;
+		position: relative;
+	}
+	#langSelect a {
+		width: 100%;
+		height: 4rem;
+	}
+	#langSelect a:not(:first-child) {
+		display: none;
+		background-color: var(--green);
+	}
+	#langSelect:hover a {
+		position: absolute;
+		display: block;
+	}
+	#langSelect a:nth-child(2) { top: 0; }
+	#langSelect a:nth-child(2) { top: -4rem; }
+	#langSelect a:nth-child(3) { top: -8rem; }
+	#langSelect a:nth-child(4) { top: -12rem; border-top-left-radius: .5rem; }
+	nav a:hover {
+		background-color: var(--dark-green) !important;
+	}
+	nav button { display: none; }
+}
+@media (max-width: 320px) and (orientation: portrait) {
+	#langSelect { display:none; }
+	#mainSelect { flex-basis: 100%; }	
+}
+@media (orientation: landscape) {
+	#navBar {
+		height: 100vh;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	nav, nav a, nav button {
+		width: 4rem;
+	}
+	#mainSelect {
+		flex-direction: column;
+		flex-basis: 16rem;
+	}
+	nav button {
+		display: block;
+		flex-basis: 2rem;
+		width: 4rem;
+		border: 0;
+	}
+}
+@media (orientation: landscape) and (min-height: 608px) {
+	#langSelect {
+		flex-basis: 18rem;
+		position: static;
+		display: flex;
+		flex-direction: column;
+	}
+	#langSelect a {
+		display: block !important;
+		flex-basis: 4rem;
+		position: static !important;
+	}
+}
+@media (orientation: landscape) and (min-height: 352px) and (max-height: 608px) {
+	#langSelect {
+		flex-basis: 4rem;
+	}
+	#langSelect a {
+		width: 4rem;
+		height: 4rem;
+	}
+	#langSelect a:nth-child(2) { right: 0; }
+	#langSelect a:nth-child(2) { right: -4rem; }
+	#langSelect a:nth-child(3) { right: -8rem; }
+	#langSelect a:nth-child(4) {
+		right: -12rem;
+		border-top-right-radius: .5rem;
+		border-bottom-right-radius: .5rem;
+	}
+}
+@media (max-height: 320px) and (orientation: landscape) {
+	#langSelect { display:none; }
+	#mainSelect { flex-basis: 100%; }	
+}*/
+
+
+
+
+
+	
+/*Výchozí barva a text
+:root{
+	--light-green: hsl(120, 50%, 60%);
+	--green: hsl(120, 50%, 40%);
+	--dark-green: hsl(120, 70%, 25%);
+    --text: #e8eaed;
+    --border: #202124;
+    --icons: #9aa0a6;
+	background: var(--BG);
+	font-size: 16px;
+}
+
+Flex
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	align-content: center;
+}
+
+Odkaz
+a {
+	color: var(--text);
+	background: var(--green);
+	text-align: center;
+	border: .1rem none var(--border);
+	border-style: none none solid solid;
+	text-decoration: none;
+	font-family: PatrickHandSC, sans-serif;
+}
+a:first-child {
+	border-left-width: .5rem
+}
+
+/**Hover**
+a:hover {
+	background: var(--dark-green);
+}
+
+/**Přechod**
+a {
+	transition: .5s ease-out;
+}
+
+@media (orientation: landscape) {
+	a {
+		font-size: 30vh;
+		padding: 10vh 0;
+		border-style: solid none none solid;
+	}	
+	i {
+		margin-right: 0;
+		font-size: 40vh;
+	}
+	nav {flex-direction: row;}
+}
+*/
