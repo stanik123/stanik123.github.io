@@ -8,181 +8,256 @@
 ************************/
 
 #navBar {
-	position: fixed; bottom: 0; left: 0;
+	position: fixed;
+	bottom: 0; left: 0;
 	z-index: 1;
 }
-nav, nav a, nav a i, nav a p, nav text { transition: all 1s ease-out .1s; }
-#logoText { transition: transform 1s ease-out .1s}
-#navBar nav, #navBar nav a { transition: all 1s ease-out .1s, visibility 0s ease 0s; }
-nav { background: var(--green); }
-nav a {
-	display: block;
-	text-decoration: none;
-	color: var(--text);
+nav, nav a, nav a i, nav a p, nav text {
+	transition: all 1s ease-out .1s;
+}
+#logoText {
+	transition: transform 1s ease-out .1s;
+	font-family: PatrickHand;
+}
+#navBar nav, #navBar nav a {
+	transition: all 1s ease-out .1s, visibility 0s ease 0s;
+}
+nav {
 	background: var(--green);
-	font-family: PatrickHand; }
-nav a:hover { background: var(--dark-green); }
-
-nav input {
-	display: block;
-	width: 0; height: 0; }
-nav label {
-	display: block;
-	width: 100%; height: 100%;
-	cursor: pointer; }
-#langSelect { position: fixed; visibility: hidden; }
-#navArrow { visibility: hidden; }
-
-#langSelect a img {
-	display: block;
-	height: 2rem;
-	margin: .5rem auto; }
-
-#logoText { font-family: PatrickHand; }
-nav svg { height: 3rem; }
-
+	a {
+		display: block;
+		text-decoration: none;
+		color: var(--text);
+		background: var(--green);
+		font-family: PatrickHand;
+		&:hover {
+			background: var(--dark-green);
+		}
+	}
+	input {
+		display: block;
+		width: 0; height: 0;
+	}
+	label {
+		display: block;
+		width: 100%; height: 100%;
+		cursor: pointer;
+	}
+	svg {
+		height: 3rem;
+	}
+}
+#langSelect {
+	position: fixed;
+	visibility: hidden;
+	a img {
+		display: block;
+		height: 2rem;
+		margin: .5rem auto;
+	}
+}
+#navArrow {
+	visibility: hidden;
+}
 @media (orientation: landscape) {
-	body { padding-left: 4rem; }
-	#navBar { height: 100vh; width: 4rem; }
+	body {
+		padding-left: 4rem;
+	}
+	#navBar {
+		height: 100vh; width: 4rem;
+	}
 	nav a {
 		height: 4rem; width: 4rem;
 		text-align: left;
-		padding: .5rem .75rem; }
-		
-	nav a i {
-		display: inline-block; 
-		width: 2.5rem; height: 2.5rem;
-		line-height: 2.5rem; text-align: center;
-		margin-top: .25rem;
-		font-size: 1.25rem;
-		border-radius: 50%;
-		background: rgba(0, 0, 0, 0.5); }
-	nav a p {
-		display: inline-block; position: absolute;
-		width: 0; height: 3rem; line-height: 3rem;
-		margin-left: .25rem;
-		overflow: hidden;
-		font-size: 1.1rem; }
-	
-	#navArrow { height: calc(100vh - 28rem); }
-	#navArrow i:last-child { display: none; }
-	
-	#navBar:hover { width: 8rem; }
-	#navBar:hover a { width: 8rem; }
-	#navBar:hover a p { width: 4rem; }
-		
+		padding: .5rem .75rem;
+		i {
+			display: inline-block; 
+			width: 2.5rem; height: 2.5rem;
+			line-height: 2.5rem; text-align: center;
+			margin-top: .25rem;
+			font-size: 1.25rem;
+			border-radius: 50%;
+			background: rgba(0, 0, 0, 0.5);
+		}
+		p {
+			display: inline-block; position: absolute;
+			width: 0; height: 3rem; line-height: 3rem;
+			margin-left: .25rem;
+			overflow: hidden;
+			font-size: 1.1rem;
+		}
+	}
+	#navArrow {
+		height: calc(100vh - 28rem);
+		i:last-child {
+			display: none;
+		}
+	}
+	#navBar:hover {
+		width: 8rem; 
+		a {
+			width: 8rem; 
+			p {
+				width: 4rem;
+			}
+		}
+		#logoText {
+			transform: scaleX(1);
+		}
+		#langSelect {
+			left: 8rem;
+			width: 27.6rem;
+		}
+	}
 	/*@media (hover: none) {
 		body { padding-left: 8rem; }
 		#navBar { width: 8rem; }
 		#navBar a {	width: 8rem; }
 		#navBar a p { width: 4rem; }
 	}*/
-	
-	
 	/*@media (hover: hover){*/
-		nav svg { margin-left: .125rem; }
-		#navBar #logoText { transform: scaleX(0); transform-origin: 37.5%;  }
-		#navBar:hover #logoText { transform: scaleX(1); }
-	
-	
-	#navBar:hover #langSelect {
-		left: 8rem;
-		width: 27.6rem;	}
+	nav svg {
+		margin-left: .125rem;
+	}
+	#navBar #logoText {
+		transform: scaleX(0);
+		transform-origin: 37.5%;
+	}
 	#langSelect {
 		left: 4rem;
 		width: 24rem;
 		display: flex;
 		top: 12rem;
 		height: 4rem;
-		border-radius: 0 2rem 1rem 0;}
-	#checkLang:checked ~ #langSelect { visibility: visible; }
-	#langSelect a { flex-basis: 25%; }
-	#langSelect a:last-child { border-radius: 0 2rem 1rem 0; }
-	
+		border-radius: 0 2rem 1rem 0;
+	}
+	#checkLang:checked ~ #langSelect {
+		visibility: visible;
+	}
+	#langSelect a {
+		flex-basis: 25%;
+		&:last-child {
+			border-radius: 0 2rem 1rem 0;
+		}
+	}
 	@media (max-height: 28rem) {
 		#navArrow {
 			visibility: visible;
-			height: 4rem; }
+			height: 4rem;
+		}
 		#navBar > a:nth-of-type(6) {
 			display: none;
 			left: 8rem; top: 16rem;
 			margin: 0;
-			border-radius: 0; } /*Favorite*/
+			border-radius: 0;
+		} /*Favorite*/
 		#navBar > a:nth-of-type(7) {
 			display: none;
 			left: 16rem; top: 16rem;
 			margin: 0;
-			border-radius: 0 2rem 1rem 0; } /*Cooked*/
+			border-radius: 0 2rem 1rem 0;
+		} /*Cooked*/
 		#checkArrow:checked ~ a:nth-of-type(6), #checkArrow:checked ~ a:nth-of-type(7) {
 			position: fixed;
-			display: block; }
-		#checkLang:checked ~ a:nth-of-type(7) { border-radius: 0 0 1rem 0; }
-		
+			display: block;
+		}
+		#checkLang:checked ~ a:nth-of-type(7) {
+			border-radius: 0 0 1rem 0;
+		}
 		@media (max-height: 24rem) {
 			#navBar > a:nth-of-type(4) {
 				display: none;
 				left: 24rem; top: 12rem;
 				margin: 0;
-				border-radius: 0 2rem 1rem 0; } /*Lang*/
+				border-radius: 0 2rem 1rem 0;
+			} /*Lang*/
 			#checkArrow:checked ~ a:nth-of-type(4) {
 				position: fixed;
-				display: block; }
-			
+				display: block;
+			}
 			#navBar > a:nth-of-type(6), #navBar > a:nth-of-type(7) {
 				top: 12rem;
-				border-radius: 0; }
-			#checkLang:checked ~ #langSelect { top: 8rem; }
-			#checkLang:checked ~ a:nth-of-type(4) { border-radius: 0 0 1rem 0; }
-			
+				border-radius: 0;
+			}
+			#checkLang:checked ~ #langSelect {
+				top: 8rem;
+			}
+			#checkLang:checked ~ a:nth-of-type(4) {
+				border-radius: 0 0 1rem 0;
+			}
 			@media (max-height: 20rem) {
 				#navBar > a:nth-of-type(8) {
 					display: none;
 					left: 32rem; top: 12em;
 					margin: 0;
-					border-radius: 0 2rem 1rem 0; } /*Account*/
+					border-radius: 0 2rem 1rem 0;
+				} /*Account*/
 				#checkArrow:checked ~ a:nth-of-type(8) {
 					position: fixed;
-					display: block; }
-				#navBar > a:nth-of-type(4), #checkLang:checked ~ a:nth-of-type(4) { border-radius: 0; }
-				#checkLang:checked ~ #langSelect { border-radius: 0 2rem 0 0; }
+					display: block;
+				}
+				#navBar > a:nth-of-type(4), #checkLang:checked ~ a:nth-of-type(4) {
+					border-radius: 0;
+				}
+				#checkLang:checked ~ #langSelect {
+					border-radius: 0 2rem 0 0;
+				}
 			}
 		}
 	}
 }
-
 @media (orientation: portrait) {
-	body { padding-bottom: 4rem; }
+	body {
+		padding-bottom: 4rem;
+	}
 	#navBar {
 		height: 4rem; width: 100vw;
-		display: flex; }
+		display: flex;
+	}
 	nav a {
 		height: 4rem; min-width: 4rem; max-width: 8rem;
 		flex: 1 0 4rem;
 		padding: .5rem;
-		text-align: center; }
-	nav a:first-of-type { flex: 0 0 8rem; }
-	nav a i { font-size: 1.5rem; line-height: 1.75rem; }
-	nav a p { font-size: 1rem; line-height: 1.25rem; }
+		text-align: center;
+		&:first-of-type {
+			flex: 0 0 8rem;
+		}
+		i {
+			font-size: 1.5rem; line-height: 1.75rem;
+		}
+		p {
+			font-size: 1rem; line-height: 1.25rem;
+		}
+	} 
 	#navArrow {
 		flex: 0 0 0;
 		min-width: 0;
-		padding: 0; }
-	#navArrow i:first-child { display: none; }
-	
+		padding: 0;
+		i:first-child {
+			display: none;
+		}
+	}
 	#checkLang:checked ~ #langSelect {
 		display: flex; visibility: visible;
 		position: fixed; right: 8rem; bottom: 4rem;
-		height: 4rem; width: 21rem; }
-	#langSelect a { flex: 0 0 25%; }
+		height: 4rem; width: 21rem;
+	}
+	#langSelect a {
+		flex: 0 0 25%;
+	}
 	
 	@media (min-width: 56rem) {
-		nav a { flex: 0 0 8rem; }
+		nav a {
+			flex: 0 0 8rem;
+		}
 		#navArrow {
 			flex: 1 0 0;
-			max-width: calc(100vh - 25.5rem); }
+			max-width: calc(100vh - 25.5rem);
+		}
 		#checkLang:checked ~ #langSelect {
 			left: 8rem; right: auto;
-			width: 32rem; }
+			width: 32rem;
+		}
 	}
 	
 	@media (max-width: 32rem) {
@@ -190,37 +265,47 @@ nav svg { height: 3rem; }
 		#navBar > a:nth-of-type(6) {
 			display: none;
 			right: 0;
-			width: 5rem;}
+			width: 5rem;
+		}
 		#navBar > a:nth-of-type(7) {
 			display: none;
 			right: 5rem;
-			width: 5rem; }
+			width: 5rem;
+		}
 		#checkArrow:checked ~ a:nth-of-type(6), #checkArrow:checked ~ a:nth-of-type(7) {
 			position: fixed; bottom: 4rem;
-			display: block; }
+			display: block;
+		}
 		#checkLang:checked ~ #langSelect {
 			right: 10rem;
-			width: 20rem; }
-		
+			width: 20rem;
+		}
 		@media (max-width: 28rem) {
 			#navBar > a:nth-of-type(4) {
 				display: none;
 				right: 10rem; bottom: 4rem;
-				width: 5rem; }
+				width: 5rem;
+			}
 			#checkArrow:checked ~ a:nth-of-type(4) {
 				position: fixed;
-				display: block; }
-			#checkLang:checked ~ #langSelect { bottom: 8rem; right: 0;}
-			#checkLang:checked ~ #langSelect { bottom: 8rem; right: 0;}
-			#checkArrow:not(:checked) ~ #langSelect { visibility: hidden; }
+				display: block;
+			}
+			#checkLang:checked ~ #langSelect {
+				bottom: 8rem; right: 0;
+			}
+			#checkArrow:not(:checked) ~ #langSelect {
+				visibility: hidden;
+			}
 						
 			@media (max-width: 24rem) {
 				#navBar > a:nth-of-type(8) {
 					display: none;
 					right: 15rem; bottom: 4rem;
-					width: 5rem;}
+					width: 5rem;
+				}
 				#checkArrow:checked ~ a:nth-of-type(8) {
-					position: fixed; display: block; }
+					position: fixed; display: block;
+				}
 			}
 		}
 	}

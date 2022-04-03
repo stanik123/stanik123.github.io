@@ -1,83 +1,135 @@
-@charset "UTF-8";
 @import url("fonts.css");
 @import url("nav.css");
-* {	margin: 0; padding: 0; box-sizing: border-box; }
-
-/*******************************
-
-	Styles for StanleyRecipes
-			by stanik
-
-********************************/
-
-/**********
- * Colors *
- **********/
-:root {
-	--green: hsl(160, 80%, 40%);
-	--dark-green: hsl(160, 80%, 30%);
-	--BG: #e8eaed;
-	--text: #202124;
-	--border: #5f6368;
-
+@import url("recipe.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/*********************************
+*								*
+*	Styles for Make it Edible	*
+*			by stanik123		*
+*								*
+   *********************************/
+/* Colors */
+:root {
+  --green: hsl(160, 80%, 40%);
+  --dark-green: hsl(160, 80%, 30%);
+  --BG: #e8eaed;
+  --text: #202124;
+  --border: #5f6368;
+  font-family: BloggerSans, sans-serif;
+  font-weight: 400;
+}
+
 @media (prefers-color-scheme: dark) {
-	:root {
-		--green: hsl(160, 80%, 20%);
-		--dark-green: hsl(160, 80%, 10%);
-		--BG: #202124;
-		--text: #e8eaed;
-	}
+  :root {
+    --green: hsl(160, 80%, 20%);
+    --dark-green: hsl(160, 80%, 10%);
+    --BG: #202124;
+    --text: #e8eaed;
+  }
 }
-:root {
-	font-family: BloggerSans, sans-serif;
-	font-weight: 400;
-	background: var(--BG);
-	color: var(--text);
+h1 {
+  font-family: PatrickHandSC, serif;
 }
-body, main, main > header, article, section, footer { background: var(--BG); }
 
-/**********
- * Header *
- **********/
+h2, h3, h4 {
+  font-family: PatrickHand, serif;
+}
+
+:root, body, main {
+  background: var(--BG);
+  color: var(--text);
+}
+
+/* Imports */
+/* Header */
 body {
-	width: 100vw;
-	height: 100vh; }
+  width: 100vw;
+  height: 100vh;
+}
+
 main {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	overflow-y: auto; }
-main, header, article, section, footer { width: 100%; }
-article, section { flex-grow: 1; padding: 2em; }
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+main, header, article, section, footer {
+  width: 100%;
+}
+
+article, section {
+  flex-grow: 1;
+  padding: 2em;
+}
 
 header img {
-	width: 100%;
-	max-height: 100vh;
-	object-fit: cover;
+  width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
 }
-header { position: relative; }
+
+header {
+  position: relative;
+}
+
 h1 {
-	position: absolute;
-    left: 2em; bottom: 2em;
-    font-family: PatrickHandSC, sans-serif;
-    background: rgba(0, 0, 0, 0.9);
-    padding: .5rem 4rem;
-    border-radius: 1em 3em;
-	font-size: 3em; }
-@media (orientation: portrait) { h1 span { display: none; } }
-@media (min-width: 1200px) { h1 { font-size: 5em; } }
+  position: absolute;
+  left: 2em;
+  bottom: 2em;
+  font-family: PatrickHandSC, sans-serif;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 0.5rem 4rem;
+  border-radius: 1em 3em;
+  font-size: 3em;
+}
 
+@media (orientation: portrait) {
+  h1 span {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 5em;
+  }
+}
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
 
+::-webkit-scrollbar-track {
+  border: 0.3em solid var(--BG);
+  border-right: none;
+  border-radius: 0.1em;
+  background-color: var(--border);
+}
 
+::-webkit-scrollbar-thumb {
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  background-color: var(--green);
+}
 
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--dark-green);
+}
 
+/* Firefox */
+:root {
+  scrollbar-color: var(--green) var(--border);
+  scrollbar-width: 0.5rem;
+}
 
-
-
-
-
-
+article {
+  padding: 2em;
+}
 
 /* Obsah *
 h2 {
@@ -102,43 +154,6 @@ main table tr td, main table tr th {
 	vertical-align: center;
 	text-align: center;
 }*/
-
-
-
-
-/*************
- * SCROLLBAR *
- *************/
-::-webkit-scrollbar { width: .5em; }
-::-webkit-scrollbar-track {
-	border: .3em solid var(--BG);
-	border-right: none;
-	border-radius: .1em;
-	background-color: var(--border); }
-::-webkit-scrollbar-thumb {
-	border-bottom-left-radius: .5em;
-	border-top-left-radius: .5em;
-	background-color: var(--green); }
-::-webkit-scrollbar-thumb:hover { background-color: var(--dark-green); }
-/*Firefox alternate*/
-:root {
-	scrollbar-color: var(--green) var(--border) ;
-	scrollbar-width: .5rem; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*#langSelect {display:none;}
 
 nav a {
@@ -241,7 +256,7 @@ nav a img {
 		height: 3rem;
 		padding: .5rem 0;
 	}
-	
+
 	#navBar:hover {
 		width: 8rem;
 	}
@@ -259,49 +274,11 @@ nav a img {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 #mainSelect a {
 		flex-basis: 25%;
 		text-decoration: none;
-		
+
 		color: var(--text);
 		font-size: 1rem;
 		line-height: 1.5rem;
@@ -326,7 +303,7 @@ nav a img {
 	#mainSelect {
 		display: flex;
 	}
-	
+
 	#mainSelect a {
 		flex-basis: 25%;
 		text-decoration: none;
@@ -337,8 +314,8 @@ nav a img {
 		margin: 0 auto;
 		padding: 1rem 0;
 	}
-	
-	
+
+
 	#mainSelect {
 		flex-basis: 80%;
 	}
@@ -425,13 +402,7 @@ nav a img {
 	#langSelect { display:none; }
 	#mainSelect { flex-basis: 100%; }	
 }*/
-
-
-
-
-
-	
-/*Výchozí barva a text
+/*Vychozi barva a text
 :root{
 	--light-green: hsl(120, 50%, 60%);
 	--green: hsl(120, 50%, 40%);
@@ -471,7 +442,7 @@ a:hover {
 	background: var(--dark-green);
 }
 
-/**Přechod**
+/**Prechod**
 a {
 	transition: .5s ease-out;
 }
@@ -489,3 +460,5 @@ a {
 	nav {flex-direction: row;}
 }
 */
+
+/*# sourceMappingURL=styles.css.map */

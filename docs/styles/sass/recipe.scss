@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+#ingredients {
+	display: grid;
+	grid-template:
+    	'header header'
+    	'portions portions'
+    	'lefth righth'
+    	'left right'
+    	'times times';
+	h2 {
+		grid-area: header;
+		font-size: 3em; line-height: 2em;
+	}
+	#portions {
+		grid-area: portions;
+	}
+	h3 {
+		font-size: 2em; line-height: 2em;
+		background: var(--green);
+		margin-right: 3rem;
+		padding-left: 1em;
+		&:first-of-type {
+			grid-area: lefth;
+		}
+		&:nth-of-type(2) {
+			grid-area: righth;
+		}
+	}
+	#times {
+		grid-area: times;
+	}
+	ul {
+		width: 100%;
+		&:first-of-type {
+			grid-area: left;
+		}
+		&:nth-of-type(2) {
+			grid-area: right;
+		}
+		li {
+			display: flex;
+    		align-items: center;
+    		margin-right: 3rem;
+    		background: var(--dark-green);
+    		&:nth-of-type(even) {
+    			background: var(--green);
+    		}
+			img {
+				height: 4em;
+				padding: .5em;
+				flex: 0 0 4em;
+				
+			}
+			p {
+				font-size: 1.4em; line-height: 1.5em;
+				padding: .2em;
+				&:first-of-type {
+					flex-basis: 1em;
+					text-align: right;
+				}
+				&:nth-of-type(2) {
+					padding-left: 0;
+				}
+				&:nth-of-type(3) {
+					flex-grow: 1;
+				}
+			}
+			
+		}
+	}
+}

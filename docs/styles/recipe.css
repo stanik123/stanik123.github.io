@@ -1,0 +1,68 @@
+#ingredients {
+  display: grid;
+  grid-template: "header header" "portions portions" "lefth righth" "left right" "times times";
+}
+#ingredients h2 {
+  grid-area: header;
+  font-size: 3em;
+  line-height: 2em;
+}
+#ingredients #portions {
+  grid-area: portions;
+}
+#ingredients h3 {
+  font-size: 2em;
+  line-height: 2em;
+  background: var(--green);
+  margin-right: 3rem;
+  padding-left: 1em;
+}
+#ingredients h3:first-of-type {
+  grid-area: lefth;
+}
+#ingredients h3:nth-of-type(2) {
+  grid-area: righth;
+}
+#ingredients #times {
+  grid-area: times;
+}
+#ingredients ul {
+  width: 100%;
+}
+#ingredients ul:first-of-type {
+  grid-area: left;
+}
+#ingredients ul:nth-of-type(2) {
+  grid-area: right;
+}
+#ingredients ul li {
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+  background: var(--dark-green);
+}
+#ingredients ul li:nth-of-type(even) {
+  background: var(--green);
+}
+#ingredients ul li img {
+  height: 4em;
+  padding: 0.5em;
+  flex: 0 0 4em;
+}
+#ingredients ul li p {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  padding: 0.2em;
+}
+#ingredients ul li p:first-of-type {
+  flex-basis: 1em;
+  text-align: right;
+}
+#ingredients ul li p:nth-of-type(2) {
+  padding-left: 0;
+}
+#ingredients ul li p:nth-of-type(3) {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=recipe.css.map */

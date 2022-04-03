@@ -1,5 +1,5 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 72 48">
+<svg width="72" height="48" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M0 0 H72 V16 H0 z"/>
   <path fill="#d00" d="M0 16 H72 V32 H0 z"/>
   <path fill="#ffce00" d="M0 32 H72 V48 H0 z"/>

@@ -2,7 +2,7 @@ document.body.insertAdjacentHTML("afterbegin",`
 <nav id="navBar">
   <input type="checkbox" id="checkArrow"><input type="checkbox" id="checkLang">
   <a href="index.html" target="_top">
-   <svg version="1.1" viewBox="0 0 1024 512" xmlns="http://www.w3.org/2000/svg">
+   <svg version="1.1" height="512" viewBox="0 0 1024 512" xmlns="http://www.w3.org/2000/svg">
     <g stroke-linecap="round" stroke-linejoin="round" stroke-width="8" stroke="#202124">
      <path d="m152 272c-10 48-88 184-88 184-8 24 8 32 32 32h192c24 0 40-8 32-32 0 0-78-136-88-184-9.801-47.04 0-80 0-80h-80s9.801 32.96 0 80z" fill="#e8eaed"/>
      <g stroke="#052e20">
@@ -33,14 +33,14 @@ document.body.insertAdjacentHTML("afterbegin",`
     </g>
    </svg>
   </a>
-  <a href="news.html" target="_top"><i></i><p>Novinky</p></a>
-  <a href="recipes.html" target="_top"><i></i><p>Recepty</p></a>
+  <a href="cz/news.html" target="_top"><i></i><p>Novinky</p></a>
+  <a href="cz/recipes.html" target="_top"><i></i><p>Recepty</p></a>
   <a><label for="checkLang"><i></i><p>Jazyk</p></label></a>
   <nav id="langSelect">
-    <a href=""><img src="../images/icons/cz.svg" alt="cz"></a>
-    <a href=""><img src="../images/icons/us.svg" alt="en"></a>
-    <a href=""><img src="../images/icons/de.svg" alt="de"></a>
-    <a href=""><img src="../images/icons/sk.svg" alt="sk"></a>
+    <a href=""><img src="images/icons/cz.svg" alt="cz"></a>
+    <a href=""><img src="images/icons/us.svg" alt="en"></a>
+    <a href=""><img src="images/icons/de.svg" alt="de"></a>
+    <a href=""><img src="images/icons/sk.svg" alt="sk"></a>
   </nav>
   <a id="navArrow"><label for="checkArrow"><i></i><i></i></label></a>
   <a href=""><i></i><p>Oblíbené</p></a>

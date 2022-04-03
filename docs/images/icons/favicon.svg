@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
- <g fill="none" stroke="#202124" stroke-linecap="round" stroke-linejoin="round" stroke-width="20">
-  <path d="m502 174c-82 82-246-82-328 0s82 246 0 328"/>
-  <path d="m10 338c82-82 246 82 328 0s-82-246 0-328"/>
-  <path d="m322.6 51 118 118"/>
-  <path d="m230.4 184.2 118 118"/>
-  <path d="m163.8 209.9 118 118"/>
-  <path d="m71.5 343.1 118 118"/>
- </g>
+<?xml version="1.1" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#202124" stroke-linecap="round" stroke-linejoin="round" stroke-width="20">
+    <path d="m502 174c-82 82-246-82-328 0s82 246 0 328"/>
+    <path d="m10 338c82-82 246 82 328 0s-82-246 0-328"/>
+    <path d="m322.6 51 118 118"/>
+    <path d="m230.4 184.2 118 118"/>
+    <path d="m163.8 209.9 118 118"/>
+    <path d="m71.5 343.1 118 118"/>
+  </g>
 </svg>
