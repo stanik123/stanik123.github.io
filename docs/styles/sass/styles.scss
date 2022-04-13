@@ -1,11 +1,12 @@
 @charset "UTF-8";
 * {	margin: 0; padding: 0; box-sizing: border-box; }
-   /*********************************
-	*								*
-	*	Styles for Make it Edible	*
-	*			by stanik123		*
-	*								*
-    *********************************/
+
+/********************************
+ *								*
+ *	Styles for Make it Edible	*
+ *			by stanik123		*
+ *								*
+ ********************************/
 
 /* Colors */
 :root {
@@ -22,6 +23,7 @@
 		--green: hsl(160, 80%, 20%);
 		--dark-green: hsl(160, 80%, 10%);
 		--BG: #202124;
+		--frontBG: #404248;
 		--text: #e8eaed;
 	}
 }

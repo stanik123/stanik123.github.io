@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+/****************************************
+	Recipe templates for Make it Edible
+				by stanik123
+ ****************************************/
+
 #ingredients {
 	display: grid;
 	grid-template:
@@ -8,6 +13,7 @@
     	'lefth righth'
     	'left right'
     	'times times';
+    background: var(--frontBG);
 	h2 {
 		grid-area: header;
 		font-size: 3em; line-height: 2em;
@@ -17,9 +23,8 @@
 	}
 	h3 {
 		font-size: 2em; line-height: 2em;
-		background: var(--green);
-		margin-right: 3rem;
-		padding-left: 1em;
+		background: var(--frontBG);
+		padding: 0 1em 0 1em;
 		&:first-of-type {
 			grid-area: lefth;
 		}
@@ -42,21 +47,20 @@
 			display: flex;
     		align-items: center;
     		margin-right: 3rem;
-    		background: var(--dark-green);
+    		background: var(--frontBG);
     		&:nth-of-type(even) {
-    			background: var(--green);
+    			background: var(--frontBG);
     		}
 			img {
 				height: 4em;
 				padding: .5em;
 				flex: 0 0 4em;
-				
 			}
 			p {
 				font-size: 1.4em; line-height: 1.5em;
 				padding: .2em;
 				&:first-of-type {
-					flex-basis: 1em;
+					flex-basis: 2em;
 					text-align: right;
 				}
 				&:nth-of-type(2) {

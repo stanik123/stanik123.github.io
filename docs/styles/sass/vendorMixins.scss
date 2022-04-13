@@ -1,97 +1,100 @@
 @charset "UTF-8";
 
-/**********************
- * Supported browsers *
- **********************/
+/**********************************
+	Vendor Mixins &
+	Browser support info
+				for Make it Edible
+			by stanik123
+ ***********************************/
+
+/*******************
+ * Browser support *
+ *******************/
 /*
-Based on Grid support
-Chrome - 57
-Edge - 16
-Firefox - 52
-Safari - 10
-Opera - 44
+Based on Grid support:
+	Chrome - 57
+	Edge - 16
+	Firefox - 52
+	Safari - 10
+	Opera - 44
 */
 /*
-all //E 79
-background-blend-mode //E 79
-box-decoration-break //E 79
-break-after //F 65
-break-before //F 65
-break-inside //F 65
-caret-color //E 79, F 53, S 11.1
-clip-path //F 54
-column-span //F 71
-font-kerning //E 79
-font-stretch //S 11
-gap //F 61, CH 66, S 12, O 53
-hyphens //E 79
-image-rendering //E 79, F 65
-isolation //E 79
-mask //F 53
-mask-clip //E 79 webkit, F 53
-mask-composite //E 18 webkit, F 53
-mask-image //E 79 webkit, F 53
-mask-origin //E 79 webkit, F 53
-mask-position //E 79 webkit, F 53
-mask-repeat //E 79 webkit, F 53
-mask-size //E 79 webkit, F 53
-mask-type //E 79
-mix-blend-mode //E 79
-overflow-wrap //E 18
-place-content //E 79, F 60, CH 59, S 11.1, O 51
-resize //E 79
-row-gap //F 61, CH 66, S 12, O 53
-scroll-behavior //E 79, F 62, CH 61, S 14, O 48
-shape-image-threshold //E 79, F 62, S 10.1
-shape-margin //E 79, F 62, S 10.1
-tab-size //E 79
-text-decoration-color //E 79, S 12.1
-text-decoration-line //E 79, S 12.1
-text-decoration-style //E 79, S 12.1
-text-decoration-thickness //E 89, F 70, CH 89, S 12.1, O 75
-text-justify //F 55
-text-orientation //E 79, S 14
-touch-action //S 13
-user-select //E 79, F 69
-will-change //E 79
-writing-mode //S 11
-:in-range //S 10.1
-:out-of-range //S 10.1
-conic-gradient() //CH 69, E 79, F 83, S 12.1, O 56
-max() //CH 79, E 79, F 75, S 11.1, O 66
-min() //CH 79, E 79, F 75, S 11.1, O 66
-repeating-conic-gradient() //CH 69, E 79, F 83, S 12.1, O 56
+Out of version support:
+  all						//E 79
+  background-blend-mode		//E 79
+  box-decoration-break		//E 79
+  break-after				//F 65
+  break-before				//F 65
+  break-inside				//F 65
+  caret-color				//E 79, F 53, S 11.1
+  clip-path					//F 54
+  column-span				//F 71
+  font-kerning				//E 79
+  font-stretch				//S 11
+  gap						//F 61, CH 66, S 12, O 53
+  hyphens					//E 79
+  image-rendering			//E 79, F 65
+  isolation					//E 79
+  mask						//F 53
+  mask-clip					//E 79 webkit, F 53
+  mask-composite			//E 18 webkit, F 53
+  mask-image				//E 79 webkit, F 53
+  mask-origin				//E 79 webkit, F 53
+  mask-position				//E 79 webkit, F 53
+  mask-repeat				//E 79 webkit, F 53
+  mask-size					//E 79 webkit, F 53
+  mask-type					//E 79
+  mix-blend-mode			//E 79
+  overflow-wrap				//E 18
+  place-content				//E 79, F 60, CH 59, S 11.1, O 51
+  resize					//E 79
+  row-gap					//F 61, CH 66, S 12, O 53
+  scroll-behavior			//E 79, F 62, CH 61, S 14, O 48
+  shape-image-threshold		//E 79, F 62, S 10.1
+  shape-margin				//E 79, F 62, S 10.1
+  tab-size					//E 79
+  text-decoration-color		//E 79, S 12.1
+  text-decoration-line		//E 79, S 12.1
+  text-decoration-style		//E 79, S 12.1
+  text-decoration-thickness	//E 89, F 70, CH 89, S 12.1, O 75
+  text-justify				//F 55
+  text-orientation			//E 79, S 14
+  touch-action				//S 13
+  user-select				//E 79, F 69
+  will-change				//E 79
+  writing-mode				//S 11
+  :in-range					//S 10.1
+  :out-of-range				//S 10.1
+  conic-gradient()			//CH 69, E 79, F 83, S 12.1, O 56
+  max()						//CH 79, E 79, F 75, S 11.1, O 66
+  min()						//CH 79, E 79, F 75, S 11.1, O 66
+  repeating-conic-gradient()//CH 69, E 79, F 83, S 12.1, O 56
 */
-
-
-
-/************
- * Unusable *
- ************/
 /*
-@font-feature-values //E, CH, S, O
-font-language-override //E, CH, S, O
-font-size-adjust //E, CH, S, O
-font-synthesis //E, CH, O
-font-variant-alternates //E, CH, O
-font-variant-caps //S, E 79
-font-variant-east-asian //E, CH, S, O
-font-variant-numeric //E
-font-variant-position //E, CH, S, O
-line-break //F
-mask-mode //E, CH, S, O, F 53
-orphans //F
-@page //S
-text-align-last //S
-text-combine-upright //E
-text-emphasis //E
-text-emphasis-color //E
-text-emphasis-position //E
-text-emphasis-style //E
-text-underline-position //E, F, S, O
-@viewport //F, S
-widows //F
-::marker /O, CH 86, E 86, F 68, S 11.1
+Out of browser support:
+  @font-feature-values		//E, CH, S, O
+  font-language-override	//E, CH, S, O
+  font-size-adjust			//E, CH, S, O
+  font-synthesis			//E, CH, O
+  font-variant-alternates	//E, CH, O
+  font-variant-caps			//S, E 79
+  font-variant-east-asian	//E, CH, S, O
+  font-variant-numeric		//E
+  font-variant-position		//E, CH, S, O
+  line-break				//F
+  mask-mode					//E, CH, S, O, F 53
+  orphans					//F
+  @page						//S
+  text-align-last			//S
+  text-combine-upright		//E
+  text-emphasis				//E
+  text-emphasis-color		//E
+  text-emphasis-position	//E
+  text-emphasis-style		//E
+  text-underline-position	//E, F, S, O
+  @viewport					//F, S
+  widows					//F
+  ::marker					//O, CH 86, E 86, F 68, S 11.1
 */
 @mixin text-combine-upright($value){
 	-webkit-text-combine-upright: $value; //S 5.1-all
@@ -113,45 +116,38 @@ widows //F
 	-webkit-text-emphasis-style: $value; //O 15-all
 	text-emphasis-style: $value;
 }
-
 @mixin text-align-last($value){
 	-moz-text-align-last: $value; //F 12-49
 	text-align-last: $value;
 }
-
-
-/******************
- * Always needed! *
- ******************/
-
 /*
-backface-visibility
-box-decoration-break
-font-variant-ligatures
-hyphens
-mask
-mask-clip
-mask-composite
-mask-image
-mask-origin
-mask-position
-mask-repeat
-mask-size
-tab-size
-text-combine-upright
-text-emphasis
-text-emphasis-color
-text-emphasis-position
-text-emphasis-style
-text-orientation
-user-select
-:fullscreen
-::placeholder
-:read-only
-:read-write
-::selection
+Always need prefix:
+  backface-visibility
+  box-decoration-break
+  font-variant-ligatures
+  hyphens
+  mask
+  mask-clip
+  mask-composite
+  mask-image
+  mask-origin
+  mask-position
+  mask-repeat
+  mask-size
+  tab-size
+  text-combine-upright
+  text-emphasis
+  text-emphasis-color
+  text-emphasis-position
+  text-emphasis-style
+  text-orientation
+  user-select
+  :fullscreen
+  ::placeholder
+  :read-only
+  :read-write
+  ::selection
 */
-
 @mixin backface-visibility($value){
 	-webkit-backface-visibility: $value; //CH 12-36, S 4-all, O 15-23
 	-moz-backface-visibility: $value; //F 10-16
@@ -270,9 +266,9 @@ user-select
 	}
 }
 
-/***************
- * Unnecessary *
- ***************/
+/*
+Some other prefixes, that are unnecessary:
+*/
 
 @mixin align-content($value){
 	-webkit-align-content: $value; //S 7-9

@@ -1,6 +1,11 @@
+/****************************************
+	Recipe templates for Make it Edible
+				by stanik123
+ ****************************************/
 #ingredients {
   display: grid;
   grid-template: "header header" "portions portions" "lefth righth" "left right" "times times";
+  background: var(--frontBG);
 }
 #ingredients h2 {
   grid-area: header;
@@ -13,9 +18,8 @@
 #ingredients h3 {
   font-size: 2em;
   line-height: 2em;
-  background: var(--green);
-  margin-right: 3rem;
-  padding-left: 1em;
+  background: var(--frontBG);
+  padding: 0 1em 0 1em;
 }
 #ingredients h3:first-of-type {
   grid-area: lefth;
@@ -39,10 +43,10 @@
   display: flex;
   align-items: center;
   margin-right: 3rem;
-  background: var(--dark-green);
+  background: var(--frontBG);
 }
 #ingredients ul li:nth-of-type(even) {
-  background: var(--green);
+  background: var(--frontBG);
 }
 #ingredients ul li img {
   height: 4em;
@@ -55,7 +59,7 @@
   padding: 0.2em;
 }
 #ingredients ul li p:first-of-type {
-  flex-basis: 1em;
+  flex-basis: 2em;
   text-align: right;
 }
 #ingredients ul li p:nth-of-type(2) {
@@ -65,4 +69,4 @@
   flex-grow: 1;
 }
 
-/*# sourceMappingURL=recipe.css.map */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22sass/recipe.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;EACC;EACA,eACI;EAKD;;AACH;EACC;EACA;EAAgB;;AAEjB;EACC;;AAED;EACC;EAAgB;EAChB;EACA;;AACA;EACC;;AAED;EACC;;AAGF;EACC;;AAED;EACC;;AACA;EACC;;AAED;EACC;;AAED;EACC;EACG;EACA;EACA;;AACA;EACC;;AAEJ;EACC;EACA;EACA;;AAED;EACC;EAAkB;EAClB;;AACA;EACC;EACA;;AAED;EACC;;AAED;EACC%22,%22file%22:%22recipe.css%22%7D */
