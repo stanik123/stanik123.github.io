@@ -6,29 +6,25 @@
   display: grid;
   grid-template: "header header" "portions portions" "lefth righth" "left right" "times times";
   background: var(--frontBG);
+  padding: 0 2em 2em;
 }
 #ingredients h2 {
   grid-area: header;
   font-size: 3em;
   line-height: 2em;
-}
-#ingredients #portions {
-  grid-area: portions;
+  text-align: center;
 }
 #ingredients h3 {
   font-size: 2em;
   line-height: 2em;
   background: var(--frontBG);
-  padding: 0 1em 0 1em;
+  padding: 1em 1em 0;
 }
 #ingredients h3:first-of-type {
   grid-area: lefth;
 }
 #ingredients h3:nth-of-type(2) {
   grid-area: righth;
-}
-#ingredients #times {
-  grid-area: times;
 }
 #ingredients ul {
   width: 100%;
@@ -40,33 +36,106 @@
   grid-area: right;
 }
 #ingredients ul li {
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
-  margin-right: 3rem;
-  background: var(--frontBG);
-}
-#ingredients ul li:nth-of-type(even) {
   background: var(--frontBG);
 }
 #ingredients ul li img {
-  height: 4em;
-  padding: 0.5em;
-  flex: 0 0 4em;
+  height: 3em;
+  padding: 0.25em 0.25em 0.25em 0;
+  flex-basis: 2.75em;
 }
-#ingredients ul li p {
-  font-size: 1.4em;
-  line-height: 1.5em;
-  padding: 0.2em;
+#ingredients ul li span {
+  padding: 0.25em 0.2em 0.25em 0;
 }
-#ingredients ul li p:first-of-type {
-  flex-basis: 2em;
-  text-align: right;
+#ingredients ul li span:nth-of-type(2) {
+  padding-right: 0.5em;
 }
-#ingredients ul li p:nth-of-type(2) {
-  padding-left: 0;
+@media (max-width: 50em) {
+  #ingredients {
+    display: flex;
+    flex-direction: column;
+  }
+  #ingredients ul {
+    padding-left: 4em;
+  }
 }
-#ingredients ul li p:nth-of-type(3) {
-  flex-grow: 1;
+@media (max-width: 40em) {
+  #ingredients ul {
+    padding-left: 2em;
+  }
+}
+@media (max-width: 30em) {
+  #ingredients {
+    padding: 0;
+  }
+  #ingredients h2 {
+    font-size: 2rem;
+  }
+  #ingredients h3 {
+    padding: 0 1em;
+    font-size: 1.7rem;
+  }
+  #ingredients ul {
+    padding-left: 1em;
+  }
+  #ingredients ul li img {
+    height: 2.5em;
+    flex-basis: 2.25em;
+  }
+  #ingredients ul li, #ingredients #portions {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 20em) {
+  #ingredients h2 {
+    font-size: 2rem;
+  }
+  #ingredients h3 {
+    font-size: 1.5rem;
+  }
+  #ingredients ul li img {
+    height: 2em;
+    flex-basis: 1.75em;
+  }
+  #ingredients ul li, #ingredients #portions {
+    font-size: 1rem;
+  }
+  #ingredients #portions button {
+    height: 1em;
+    width: 1em;
+    line-height: 1em;
+    bottom: 0.1em;
+  }
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22sass/recipe.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;EACC;EACA,eACI;EAKD;;AACH;EACC;EACA;EAAgB;;AAEjB;EACC;;AAED;EACC;EAAgB;EAChB;EACA;;AACA;EACC;;AAED;EACC;;AAGF;EACC;;AAED;EACC;;AACA;EACC;;AAED;EACC;;AAED;EACC;EACG;EACA;EACA;;AACA;EACC;;AAEJ;EACC;EACA;EACA;;AAED;EACC;EAAkB;EAClB;;AACA;EACC;EACA;;AAED;EACC;;AAED;EACC%22,%22file%22:%22recipe.css%22%7D */
+#portions {
+  grid-area: portions;
+  font-size: 1.4em;
+  text-align: center;
+}
+#portions button {
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  position: relative;
+  bottom: 0.25em;
+  font-family: BloggerSans, sans-serif;
+  font-weight: bold;
+  background: var(--frontBG);
+  color: var(--text);
+  border: solid 0.15em var(--text);
+  transition: all 0.1s ease-out 0.1s;
+}
+#portions button:hover {
+  color: var(--light-green);
+  border-color: var(--light-green);
+  cursor: pointer;
+}
+
+#times {
+  grid-area: times;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22sass/recipe.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;EACC;EACA,eACI;EAKD;EACA;;AACH;EACC;EACA;EAAgB;EAChB;;AAED;EACC;EAAgB;EAChB;EACA;;AACA;EACC;;AAED;EACC;;AAGF;EACC;;AACA;EACC;;AAED;EACC;;AAED;EACC;EACA;EACG;EACA;;AACH;EACC;EACA;EACA;;AAED;EACC;;AACA;EACC;;AAKJ;EApDD;IAqDE;IACA;;EACA;IACI;;;AAGL;EACC;IACC;;;AAGF;EAhED;IAiEE;;EACA;IACC;;EAED;IACC;IACA;;EAED;IACI;;EAEJ;IACC;IAAe;;EAEhB;IACC;;;AAGF;EACC;IACC;;EAED;IACC;;EAED;IACC;IAAa;;EAEd;IACC;;EAED;IACC;IAAa;IAAY;IACzB;;;;AAKH;EACC;EACA;EACA;;AACA;EACC;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EACC;EACA;EACA;;;AAIH;EACE%22,%22file%22:%22recipe.css%22%7D */

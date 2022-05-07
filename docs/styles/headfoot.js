@@ -110,18 +110,18 @@ function navMove() {
 /* Portions calculator */
 
 let portions = document.getElementById("portions");
-let weights = document.querySelectorAll("#ingredients ul li p:first-of-type");
+let weights = document.querySelectorAll("#ingredients ul li span:first-of-type");
 
-portions.insertAdjacentHTML("beforeEnd", `
-<button onClick="portionChange('+')">+</button>
-<button onClick="portionChange('-')">-</button>`); // No JS, No buttons
+portions.querySelector("span").insertAdjacentHTML("beforeBegin", ` <button type="button" onClick="portionChange('-')">-</button> `);
+portions.querySelector("span").insertAdjacentHTML("afterEnd", ` <button type="button" onClick="portionChange('+')">+</button> `);
+// No JS, No buttons, No portion change
 
 function portionChange(type) {
 	var porce = portions.querySelector("span").innerHTML;
 	if (type == "+") {
 		weights.forEach(element => {
 			if (!isNaN(element.innerHTML)) {
-				element.innerHTML = Math.round((element.innerHTML * (parseInt(porce) + 1) * 100) / porce) / 100
+				element.innerHTML = Math.round((element.innerHTML * (parseInt(porce) + 1) * 100) / porce) / 100;
 			}
 		});
 		portions.querySelector("span").innerHTML++;
@@ -129,7 +129,7 @@ function portionChange(type) {
 		if (porce == 1) return;
 		weights.forEach(element => {
 			if (!isNaN(element.innerHTML)) {
-				element.innerHTML = Math.round((element.innerHTML * (parseInt(porce) - 1) * 100) / porce) / 100
+				element.innerHTML = Math.round((element.innerHTML * (parseInt(porce) - 1) * 100) / porce) / 100;
 			}
 		});
 		portions.querySelector("span").innerHTML--;

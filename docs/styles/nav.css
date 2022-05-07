@@ -2,6 +2,32 @@
 	NAVBAR for Make it Edible
 			by stanik123
  ********************************/
+/* Animation */
+nav, nav a, nav a i, nav a p, nav text, #logoText {
+  transition: all 1s ease-out 0.1s;
+}
+
+#navBar nav, #navBar nav a {
+  transition: all 1s ease-out 0.1s;
+}
+
+/* Text & Colors */
+#logoText {
+  font-family: PatrickHand;
+}
+
+nav {
+  background: var(--green);
+}
+nav a {
+  font-family: PatrickHand;
+  text-decoration: none;
+  color: var(--text);
+}
+nav a:hover {
+  background: var(--dark-green);
+}
+
 #navBar {
   position: fixed;
   bottom: 0;
@@ -9,39 +35,14 @@
   z-index: 1;
 }
 
-nav, nav a, nav a i, nav a p, nav text {
-  transition: all 1s ease-out 0.1s;
-}
-
-#logoText {
-  transition: transform 1s ease-out 0.1s;
-  font-family: PatrickHand;
-}
-
-#navBar nav, #navBar nav a {
-  transition: all 1s ease-out 0.1s, visibility 0s ease 0s;
-}
-
-nav {
-  background: var(--green);
-}
-nav a {
+nav a, nav input, nav label {
   display: block;
-  text-decoration: none;
-  color: var(--text);
-  background: var(--green);
-  font-family: PatrickHand;
-}
-nav a:hover {
-  background: var(--dark-green);
 }
 nav input {
-  display: block;
   width: 0;
   height: 0;
 }
 nav label {
-  display: block;
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -52,7 +53,7 @@ nav svg {
 
 #langSelect {
   position: fixed;
-  visibility: hidden;
+  display: none;
 }
 #langSelect a img {
   display: block;
@@ -145,14 +146,13 @@ nav svg {
   #langSelect {
     left: 4rem;
     width: 24rem;
-    display: flex;
     top: 12rem;
     height: 4rem;
     border-radius: 0 2rem 1rem 0;
   }
 
   #checkLang:checked ~ #langSelect {
-    visibility: visible;
+    display: flex;
   }
 
   #langSelect a {
@@ -382,4 +382,4 @@ nav svg {
   }
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22sass/nav.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;EACC;EACA;EAAW;EACX;;;AAED;EACC;;;AAED;EACC;EACA;;;AAED;EACC;;;AAED;EACC;;AACA;EACC;EACA;EACA;EACA;EACA;;AACA;EACC;;AAGF;EACC;EACA;EAAU;;AAEX;EACC;EACA;EAAa;EACb;;AAED;EACC;;;AAGF;EACC;EACA;;AACA;EACC;EACA;EACA;;;AAGF;EACC;;;AAED;EACC;IACC;;;EAED;IACC;IAAe;;;EAEhB;IACC;IAAc;IACd;IACA;;EACA;IACC;IACA;IAAe;IACf;IAAqB;IACrB;IACA;IACA;IACA;;EAED;IACC;IAAuB;IACvB;IAAU;IAAc;IACxB;IACA;IACA;;;EAGF;IACC;;EACA;IACC;;;EAGF;IACC;;EACA;IACC;;EACA;IACC;;EAGF;IACC;;EAED;IACC;IACA;;;AAGF;AAAA;AAAA;AAAA;AAAA;AAAA;AAMA;EACA;IACC;;;EAED;IACC;IACA;;;EAED;IACC;IACA;IACA;IACA;IACA;IACA;;;EAED;IACC;;;EAED;IACC;;EACA;IACC;;;AAGF;EACC;IACC;IACA;;;EAED;IACC;IACA;IAAY;IACZ;IACA;;;AACC;EACF;IACC;IACA;IAAa;IACb;IACA;;;AACC;EACF;IACC;IACA;;;EAED;IACC;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;;;AACC;EACF;IACC;IACA;;;EAED;IACC;IACA;;;EAED;IACC;;;EAED;IACC;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;;;AACC;EACF;IACC;IACA;;;EAED;IACC;;;EAED;IACC;;;AAML;EACC;IACC;;;EAED;IACC;IAAc;IACd;;;EAED;IACC;IAAc;IAAiB;IAC/B;IACA;IACA;;EACA;IACC;;EAED;IACC;IAAmB;;EAEpB;IACC;IAAiB;;;EAGnB;IACC;IACA;IACA;;EACA;IACC;;;EAGF;IACC;IAAe;IACf;IAAiB;IAAa;IAC9B;IAAc;;;EAEf;IACC;;;AAGD;EACC;IACC;;;EAED;IACC;IACA;;;EAED;IACC;IAAY;IACZ;;;AAIF;EACC;IAAY;IAAqB;IAAgB;;;EACjD;IACC;IACA;IACA;;;EAED;IACC;IACA;IACA;;;EAED;IACC;IAAiB;IACjB;;;EAED;IACC;IACA;;;AAED;EACC;IACC;IACA;IAAc;IACd;;;EAED;IACC;IACA;;;EAED;IACC;IAAc;;;EAEf;IACC;;;AAGD;EACC;IACC;IACA;IAAc;IACd;;;EAED;IACC;IAAiB%22,%22file%22:%22nav.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22sass/nav.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;AACA;EACC;;;AAED;EACC;;;AAGD;AACA;EACC;;;AAED;EACC;;AACA;EACC;EACA;EACA;;AACA;EACC;;;AAMH;EACC;EACA;EACA;EACA;;;AAGA;EACC;;AAED;EACC;EACA;;AAED;EACC;EACA;EACA;;AAED;EACC;;;AAGF;EACC;EACA;;AACA;EACC;EACA;EACA;;;AAGF;EACC;;;AAED;EACC;IACC;;;EAED;IACC;IAAe;;;EAEhB;IACC;IAAc;IACd;IACA;;EACA;IACC;IACA;IAAe;IACf;IAAqB;IACrB;IACA;IACA;IACA;;EAED;IACC;IAAuB;IACvB;IAAU;IAAc;IACxB;IACA;IACA;;;EAGF;IACC;;EACA;IACC;;;EAGF;IACC;;EACA;IACC;;EACA;IACC;;EAGF;IACC;;EAED;IACC;IACA;;;AAGF;AAAA;AAAA;AAAA;AAAA;AAAA;AAMA;EACA;IACC;;;EAED;IACC;IACA;;;EAED;IACC;IACA;IACA;IACA;IACA;;;EAED;IACC;;;EAED;IACC;;EACA;IACC;;;AAGF;EACC;IACC;IACA;;;EAED;IACC;IACA;IAAY;IACZ;IACA;;;AACC;EACF;IACC;IACA;IAAa;IACb;IACA;;;AACC;EACF;IACC;IACA;;;EAED;IACC;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;;;AACC;EACF;IACC;IACA;;;EAED;IACC;IACA;;;EAED;IACC;;;EAED;IACC;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;;;AACC;EACF;IACC;IACA;;;EAED;IACC;;;EAED;IACC;;;AAML;EACC;IACC;;;EAED;IACC;IAAc;IACd;;;EAED;IACC;IAAc;IAAiB;IAC/B;IACA;IACA;;EACA;IACC;;EAED;IACC;IAAmB;;EAEpB;IACC;IAAiB;;;EAGnB;IACC;IACA;IACA;;EACA;IACC;;;EAGF;IACC;IAAe;IACf;IAAiB;IAAa;IAC9B;IAAc;;;EAEf;IACC;;;AAGD;EACC;IACC;;;EAED;IACC;IACA;;;EAED;IACC;IAAY;IACZ;;;AAIF;EACC;IAAY;IAAqB;IAAgB;;;EACjD;IACC;IACA;IACA;;;EAED;IACC;IACA;IACA;;;EAED;IACC;IAAiB;IACjB;;;EAED;IACC;IACA;;;AAED;EACC;IACC;IACA;IAAc;IACd;;;EAED;IACC;IACA;;;EAED;IACC;IAAc;;;EAEf;IACC;;;AAGD;EACC;IACC;IACA;IAAc;IACd;;;EAED;IACC;IAAiB%22,%22file%22:%22nav.css%22%7D */

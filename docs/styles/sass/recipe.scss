@@ -14,26 +14,22 @@
     	'left right'
     	'times times';
     background: var(--frontBG);
+    padding: 0 2em 2em;
 	h2 {
 		grid-area: header;
 		font-size: 3em; line-height: 2em;
-	}
-	#portions {
-		grid-area: portions;
+		text-align: center;
 	}
 	h3 {
 		font-size: 2em; line-height: 2em;
 		background: var(--frontBG);
-		padding: 0 1em 0 1em;
+		padding: 1em 1em 0;
 		&:first-of-type {
 			grid-area: lefth;
 		}
 		&:nth-of-type(2) {
 			grid-area: righth;
 		}
-	}
-	#times {
-		grid-area: times;
 	}
 	ul {
 		width: 100%;
@@ -44,33 +40,101 @@
 			grid-area: right;
 		}
 		li {
+			font-size: 1.4rem;
 			display: flex;
     		align-items: center;
-    		margin-right: 3rem;
     		background: var(--frontBG);
-    		&:nth-of-type(even) {
-    			background: var(--frontBG);
-    		}
 			img {
-				height: 4em;
-				padding: .5em;
-				flex: 0 0 4em;
+				height: 3em;
+				padding: .25em .25em .25em 0;
+				flex-basis: 2.75em;
 			}
-			p {
-				font-size: 1.4em; line-height: 1.5em;
-				padding: .2em;
-				&:first-of-type {
-					flex-basis: 2em;
-					text-align: right;
-				}
+			span {
+				padding: .25em .2em .25em 0;
 				&:nth-of-type(2) {
-					padding-left: 0;
-				}
-				&:nth-of-type(3) {
-					flex-grow: 1;
+					padding-right: .5em;
 				}
 			}
-			
+		}
+	}
+	@media (max-width: 50em) {
+		display: flex;
+		flex-direction: column;
+		ul {
+    		padding-left: 4em;	
+		}
+	}
+	@media (max-width: 40em) {
+		ul {
+			padding-left: 2em;
+		}
+	}
+	@media (max-width: 30em) {
+		padding: 0;
+		h2 {
+			font-size: 2rem;
+		}
+		h3 {
+			padding: 0 1em;
+			font-size: 1.7rem;
+		}
+		ul {
+    		padding-left: 1em;
+		}
+		ul li img {
+			height: 2.5em; flex-basis: 2.25em;
+		}
+		ul li, #portions {
+			font-size: 1.2rem;
+		}
+	}
+	@media (max-width: 20em) {
+		h2 {
+			font-size: 2rem;
+		}
+		h3 {
+			font-size: 1.5rem;
+		}
+		ul li img {
+			height: 2em; flex-basis: 1.75em;
+		}
+		ul li, #portions {
+			font-size: 1rem;
+		}
+		#portions button {
+			height: 1em; width: 1em; line-height: 1em;
+			bottom: .1em;
 		}
 	}
 }
+
+#portions {
+	grid-area: portions;
+	font-size: 1.4em; //line-height: 1.5em;
+	text-align: center;
+	button {
+		width: 1.5em;
+		height: 1.5em;
+		line-height: 1.5em;
+		position: relative;
+		bottom: 0.25em;
+		font-family: BloggerSans, sans-serif;
+		font-weight: bold;
+		background: var(--frontBG);
+		color: var(--text);
+		border: solid 0.15em var(--text);
+		transition: all .1s ease-out .1s;
+		&:hover {
+			color: var(--light-green);
+			border-color: var(--light-green);
+			cursor: pointer;
+		}
+	}
+}
+#times {
+		grid-area: times;
+}
+
+
+
+

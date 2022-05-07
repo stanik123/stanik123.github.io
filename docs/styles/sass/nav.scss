@@ -5,40 +5,48 @@
 			by stanik123
  ********************************/
 
-#navBar {
-	position: fixed;
-	bottom: 0; left: 0;
-	z-index: 1;
-}
-nav, nav a, nav a i, nav a p, nav text {
+/* Animation */
+nav, nav a, nav a i, nav a p, nav text, #logoText {
 	transition: all 1s ease-out .1s;
 }
-#logoText {
-	transition: transform 1s ease-out .1s;
-	font-family: PatrickHand;
-}
 #navBar nav, #navBar nav a {
-	transition: all 1s ease-out .1s, visibility 0s ease 0s;
+	transition:  all 1s ease-out .1s;
+}
+
+/* Text & Colors */
+#logoText {
+	font-family: PatrickHand;
 }
 nav {
 	background: var(--green);
 	a {
-		display: block;
+		font-family: PatrickHand;
 		text-decoration: none;
 		color: var(--text);
-		background: var(--green);
-		font-family: PatrickHand;
 		&:hover {
 			background: var(--dark-green);
 		}
 	}
-	input {
+}
+
+
+#navBar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+nav {
+	a, input, label {
 		display: block;
-		width: 0; height: 0;
+	}
+	input {
+		width: 0;
+		height: 0;
 	}
 	label {
-		display: block;
-		width: 100%; height: 100%;
+		width: 100%;
+		height: 100%;
 		cursor: pointer;
 	}
 	svg {
@@ -47,7 +55,7 @@ nav {
 }
 #langSelect {
 	position: fixed;
-	visibility: hidden;
+	display: none;
 	a img {
 		display: block;
 		height: 2rem;
@@ -124,13 +132,12 @@ nav {
 	#langSelect {
 		left: 4rem;
 		width: 24rem;
-		display: flex;
 		top: 12rem;
 		height: 4rem;
 		border-radius: 0 2rem 1rem 0;
 	}
 	#checkLang:checked ~ #langSelect {
-		visibility: visible;
+		display: flex;
 	}
 	#langSelect a {
 		flex-basis: 25%;
