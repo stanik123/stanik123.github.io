@@ -1,0 +1,5 @@
+files:
+  - source: /src/cz/*.html
+    translation: /src/%two_letters_code%/%original_file_name%
+  - source: /src/cz/includes/*.html
+    translation: /src/%two_letters_code%/includes/%original_file_name%
