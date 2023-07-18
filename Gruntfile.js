@@ -4,6 +4,8 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		bake: {
 			files: {
+				//"/src/cz/index.html": "/docs/cz/domu.html",
+				//"/src/cz/news.html": "/docs/cz/novinky.html"
 				expand: true,
 				cwd: "src/",
 				flatten: false,
@@ -27,9 +29,13 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			bake: {
-				files: ["src/**/*.html"],
+				files: ["src/**/*.html", "!*includes*"],
 				tasks: "newer:bake"
 			},
+			bake: {
+            	files: ["src/*/includes/*.html"],
+            	tasks: "bake"
+            },
 			sass: {
 				files: ["src/**/*.scss"],
 				tasks: "newer:sass"
