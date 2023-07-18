@@ -69,12 +69,10 @@ nav svg {
   body {
     padding-left: 4rem;
   }
-
   #navBar {
     height: 100vh;
     width: 4rem;
   }
-
   nav a {
     height: 4rem;
     width: 4rem;
@@ -102,14 +100,12 @@ nav svg {
     overflow: hidden;
     font-size: 1.1rem;
   }
-
   #navArrow {
     height: calc(100vh - 28rem);
   }
   #navArrow i:last-child {
     display: none;
   }
-
   #navBar:hover {
     width: 8rem;
   }
@@ -126,7 +122,6 @@ nav svg {
     left: 8rem;
     width: 27.6rem;
   }
-
   /*@media (hover: none) {
   	body { padding-left: 8rem; }
   	#navBar { width: 8rem; }
@@ -137,12 +132,10 @@ nav svg {
   nav svg {
     margin-left: 0.125rem;
   }
-
   #navBar #logoText {
     transform: scaleX(0);
     transform-origin: 37.5%;
   }
-
   #langSelect {
     left: 4rem;
     width: 24rem;
@@ -150,11 +143,9 @@ nav svg {
     height: 4rem;
     border-radius: 0 2rem 1rem 0;
   }
-
   #checkLang:checked ~ #langSelect {
     display: flex;
   }
-
   #langSelect a {
     flex-basis: 25%;
   }
@@ -167,30 +158,24 @@ nav svg {
     visibility: visible;
     height: 4rem;
   }
-
   #navBar > a:nth-of-type(6) {
     display: none;
     left: 8rem;
     top: 16rem;
     margin: 0;
     border-radius: 0;
-  }
-
-  /*Favorite*/
+  } /*Favorite*/
   #navBar > a:nth-of-type(7) {
     display: none;
     left: 16rem;
     top: 16rem;
     margin: 0;
     border-radius: 0 2rem 1rem 0;
-  }
-
-  /*Cooked*/
+  } /*Cooked*/
   #checkArrow:checked ~ a:nth-of-type(6), #checkArrow:checked ~ a:nth-of-type(7) {
     position: fixed;
     display: block;
   }
-
   #checkLang:checked ~ a:nth-of-type(7) {
     border-radius: 0 0 1rem 0;
   }
@@ -202,23 +187,18 @@ nav svg {
     top: 12rem;
     margin: 0;
     border-radius: 0 2rem 1rem 0;
-  }
-
-  /*Lang*/
+  } /*Lang*/
   #checkArrow:checked ~ a:nth-of-type(4) {
     position: fixed;
     display: block;
   }
-
   #navBar > a:nth-of-type(6), #navBar > a:nth-of-type(7) {
     top: 12rem;
     border-radius: 0;
   }
-
   #checkLang:checked ~ #langSelect {
     top: 8rem;
   }
-
   #checkLang:checked ~ a:nth-of-type(4) {
     border-radius: 0 0 1rem 0;
   }
@@ -230,18 +210,14 @@ nav svg {
     top: 12em;
     margin: 0;
     border-radius: 0 2rem 1rem 0;
-  }
-
-  /*Account*/
+  } /*Account*/
   #checkArrow:checked ~ a:nth-of-type(8) {
     position: fixed;
     display: block;
   }
-
   #navBar > a:nth-of-type(4), #checkLang:checked ~ a:nth-of-type(4) {
     border-radius: 0;
   }
-
   #checkLang:checked ~ #langSelect {
     border-radius: 0 2rem 0 0;
   }
@@ -250,13 +226,11 @@ nav svg {
   body {
     padding-bottom: 4rem;
   }
-
   #navBar {
     height: 4rem;
     width: 100vw;
     display: flex;
   }
-
   nav a {
     height: 4rem;
     min-width: 4rem;
@@ -276,7 +250,6 @@ nav svg {
     font-size: 1rem;
     line-height: 1.25rem;
   }
-
   #navArrow {
     flex: 0 0 0;
     min-width: 0;
@@ -285,7 +258,6 @@ nav svg {
   #navArrow i:first-child {
     display: none;
   }
-
   #checkLang:checked ~ #langSelect {
     display: flex;
     visibility: visible;
@@ -295,7 +267,6 @@ nav svg {
     height: 4rem;
     width: 21rem;
   }
-
   #langSelect a {
     flex: 0 0 25%;
   }
@@ -304,12 +275,10 @@ nav svg {
   nav a {
     flex: 0 0 8rem;
   }
-
   #navArrow {
     flex: 1 0 0;
     max-width: calc(100vh - 25.5rem);
   }
-
   #checkLang:checked ~ #langSelect {
     left: 8rem;
     right: auto;
@@ -322,25 +291,21 @@ nav svg {
     flex: 1 0 4rem;
     padding: 0.5rem;
   }
-
   #navBar > a:nth-of-type(6) {
     display: none;
     right: 0;
     width: 5rem;
   }
-
   #navBar > a:nth-of-type(7) {
     display: none;
     right: 5rem;
     width: 5rem;
   }
-
   #checkArrow:checked ~ a:nth-of-type(6), #checkArrow:checked ~ a:nth-of-type(7) {
     position: fixed;
     bottom: 4rem;
     display: block;
   }
-
   #checkLang:checked ~ #langSelect {
     right: 10rem;
     width: 20rem;
@@ -353,17 +318,14 @@ nav svg {
     bottom: 4rem;
     width: 5rem;
   }
-
   #checkArrow:checked ~ a:nth-of-type(4) {
     position: fixed;
     display: block;
   }
-
   #checkLang:checked ~ #langSelect {
     bottom: 8rem;
     right: 0;
   }
-
   #checkArrow:not(:checked) ~ #langSelect {
     visibility: hidden;
   }
@@ -375,11 +337,10 @@ nav svg {
     bottom: 4rem;
     width: 5rem;
   }
-
   #checkArrow:checked ~ a:nth-of-type(8) {
     position: fixed;
     display: block;
   }
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22sass/nav.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;AACA;EACC;;;AAED;EACC;;;AAGD;AACA;EACC;;;AAED;EACC;;AACA;EACC;EACA;EACA;;AACA;EACC;;;AAMH;EACC;EACA;EACA;EACA;;;AAGA;EACC;;AAED;EACC;EACA;;AAED;EACC;EACA;EACA;;AAED;EACC;;;AAGF;EACC;EACA;;AACA;EACC;EACA;EACA;;;AAGF;EACC;;;AAED;EACC;IACC;;;EAED;IACC;IAAe;;;EAEhB;IACC;IAAc;IACd;IACA;;EACA;IACC;IACA;IAAe;IACf;IAAqB;IACrB;IACA;IACA;IACA;;EAED;IACC;IAAuB;IACvB;IAAU;IAAc;IACxB;IACA;IACA;;;EAGF;IACC;;EACA;IACC;;;EAGF;IACC;;EACA;IACC;;EACA;IACC;;EAGF;IACC;;EAED;IACC;IACA;;;AAGF;AAAA;AAAA;AAAA;AAAA;AAAA;AAMA;EACA;IACC;;;EAED;IACC;IACA;;;EAED;IACC;IACA;IACA;IACA;IACA;;;EAED;IACC;;;EAED;IACC;;EACA;IACC;;;AAGF;EACC;IACC;IACA;;;EAED;IACC;IACA;IAAY;IACZ;IACA;;;AACC;EACF;IACC;IACA;IAAa;IACb;IACA;;;AACC;EACF;IACC;IACA;;;EAED;IACC;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;;;AACC;EACF;IACC;IACA;;;EAED;IACC;IACA;;;EAED;IACC;;;EAED;IACC;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;;;AACC;EACF;IACC;IACA;;;EAED;IACC;;;EAED;IACC;;;AAML;EACC;IACC;;;EAED;IACC;IAAc;IACd;;;EAED;IACC;IAAc;IAAiB;IAC/B;IACA;IACA;;EACA;IACC;;EAED;IACC;IAAmB;;EAEpB;IACC;IAAiB;;;EAGnB;IACC;IACA;IACA;;EACA;IACC;;;EAGF;IACC;IAAe;IACf;IAAiB;IAAa;IAC9B;IAAc;;;EAEf;IACC;;;AAGD;EACC;IACC;;;EAED;IACC;IACA;;;EAED;IACC;IAAY;IACZ;;;AAIF;EACC;IAAY;IAAqB;IAAgB;;;EACjD;IACC;IACA;IACA;;;EAED;IACC;IACA;IACA;;;EAED;IACC;IAAiB;IACjB;;;EAED;IACC;IACA;;;AAED;EACC;IACC;IACA;IAAc;IACd;;;EAED;IACC;IACA;;;EAED;IACC;IAAc;;;EAEf;IACC;;;AAGD;EACC;IACC;IACA;IAAc;IACd;;;EAED;IACC;IAAiB%22,%22file%22:%22nav.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/styles/nav.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;AACA;EACC;;;AAED;EACC;;;AAGD;AACA;EACC;;;AAED;EACC;;AACA;EACC;EACA;EACA;;AACA;EACC;;;AAMH;EACC;EACA;EACA;EACA;;;AAGA;EACC;;AAED;EACC;EACA;;AAED;EACC;EACA;EACA;;AAED;EACC;;;AAGF;EACC;EACA;;AACA;EACC;EACA;EACA;;;AAGF;EACC;;;AAED;EACC;IACC;;EAED;IACC;IAAe;;EAEhB;IACC;IAAc;IACd;IACA;;EACA;IACC;IACA;IAAe;IACf;IAAqB;IACrB;IACA;IACA;IACA;;EAED;IACC;IAAuB;IACvB;IAAU;IAAc;IACxB;IACA;IACA;;EAGF;IACC;;EACA;IACC;;EAGF;IACC;;EACA;IACC;;EACA;IACC;;EAGF;IACC;;EAED;IACC;IACA;;AAGF;AAAA;AAAA;AAAA;AAAA;AAAA;AAMA;EACA;IACC;;EAED;IACC;IACA;;EAED;IACC;IACA;IACA;IACA;IACA;;EAED;IACC;;EAED;IACC;;EACA;IACC;;;AAGF;EACC;IACC;IACA;;EAED;IACC;IACA;IAAY;IACZ;IACA;IACC;EACF;IACC;IACA;IAAa;IACb;IACA;IACC;EACF;IACC;IACA;;EAED;IACC;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;IACC;EACF;IACC;IACA;;EAED;IACC;IACA;;EAED;IACC;;EAED;IACC;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;IACC;EACF;IACC;IACA;;EAED;IACC;;EAED;IACC;;;AAML;EACC;IACC;;EAED;IACC;IAAc;IACd;;EAED;IACC;IAAc;IAAiB;IAC/B;IACA;IACA;;EACA;IACC;;EAED;IACC;IAAmB;;EAEpB;IACC;IAAiB;;EAGnB;IACC;IACA;IACA;;EACA;IACC;;EAGF;IACC;IAAe;IACf;IAAiB;IAAa;IAC9B;IAAc;;EAEf;IACC;;;AAGD;EACC;IACC;;EAED;IACC;IACA;;EAED;IACC;IAAY;IACZ;;;AAIF;EACC;IAAY;IAAqB;IAAgB;;EACjD;IACC;IACA;IACA;;EAED;IACC;IACA;IACA;;EAED;IACC;IAAiB;IACjB;;EAED;IACC;IACA;;;AAED;EACC;IACC;IACA;IAAc;IACd;;EAED;IACC;IACA;;EAED;IACC;IAAc;;EAEf;IACC;;;AAGD;EACC;IACC;IACA;IAAc;IACd;;EAED;IACC;IAAiB%22,%22file%22:%22nav.css%22%7D */

@@ -1,0 +1,631 @@
+@charset "UTF-8";
+
+/****************************************************
+ Universal Vendor Mixins for larger browser support 
+	+ infos
+					by stanik123
+ ****************************************************/
+
+/**************************
+ *  BROWSER SUPPORT INFO  *
+ **************************
+ *
+ * Minimal supported version based on Grid property:
+ *  Chrome - 57
+ *  Edge - 16
+ *  Firefox - 52
+ *  Safari - 10
+ *  Opera - 44
+ *
+ * Full out of support:
+ *  @font-feature-values	//CH	E		S	O
+ *  font-language-override	//CH	E		S	O
+ *  font-size-adjust		//CH	E		S	O
+ *  font-synthesis		//CH	E			O
+ *  font-variant-alternates	//CH	E			O
+ *  font-variant-caps		//	E 79		S
+ *  font-variant-east-asian	//CH	E		S	O
+ *  font-variant-numeric	//	E
+ *  font-variant-position	//CH	E		S	O
+ *  line-break			//		F
+ *  mask-mode			//CH	E	F 53	S	O	
+ *  orphans			//		F
+ *  @page			//			S
+ *  text-align-last		//			S
+ *  text-combine-upright	//	E
+ *  text-emphasis		//	E
+ *  text-emphasis-color		//	E
+ *  text-emphasis-position	//	E
+ *  text-emphasis-style		//	E
+ *  text-underline-position	//	E	F	S	O
+ *  @viewport			//		F	S
+ *  widows			//		F
+ *  ::marker			//CH 86	E 86	F 68	S 11.1  O
+ *
+ * Out of min version support:
+ *  all				//	E 79
+ *  background-blend-mode	//	E 79
+ *  box-decoration-break	//	E 79
+ *  break-after			//		F 65
+ *  break-before		//		F 65
+ *  break-inside		//		F 65
+ *  caret-color			//	E 79	F 53	S 11.1
+ *  clip-path			//		F 54
+ *  column-span			//		F 71
+ *  font-kerning		//	E 79
+ *  font-stretch		//			S 11
+ *  gap				//CH 66		F 61	S 12	O 53
+ *  hyphens			//	E 79
+ *  image-rendering		//	E 79	F 65
+ *  isolation			//	E 79
+ *  mask			//		F 53
+ *  mask-clip			//	E 79	F 53
+ *  mask-composite		//	E 18	F 53
+ *  mask-image			//	E 79	F 53
+ *  mask-origin			//	E 79	F 53
+ *  mask-position		//	E 79	F 53
+ *  mask-repeat			//	E 79	F 53
+ *  mask-size			//	E 79	F 53
+ *  mask-type			//	E 79
+ *  mix-blend-mode		//	E 79
+ *  overflow-wrap		//	E 18
+ *  place-content		//CH 59	E 79	F 60	S 11.1	O 51
+ *  resize			//	E 79
+ *  row-gap			//CH 66		F 61	S 12	O 53
+ *  scroll-behavior		//CH 61	E 79	F 62	S 14	O 48
+ *  shape-image-threshold	//	E 79	F 62	S 10.1
+ *  shape-margin		//	E 79	F 62	S 10.1
+ *  tab-size			//	E 79
+ *  text-decoration-color	//	E 79		S 12.1
+ *  text-decoration-line	//	E 79		S 12.1
+ *  text-decoration-style	//	E 79		S 12.1
+ *  text-decoration-thickness	//CH 89	E 89	F 70	S 12.1	O 75
+ *  text-justify		//		F 55
+ *  text-orientation		//	E 79		S 14
+ *  touch-action		//			S 13
+ *  user-select			//	E 79	F 69
+ *  will-change			//	E 79
+ *  writing-mode		//			S 11
+ *  :in-range			//			S 10.1
+ *  :out-of-range		//			S 10.1
+ *  conic-gradient()		//CH 69	E 79	F 83	S 12.1	O 56
+ *  max()			//CH 79	E 79	F 75	S 11.1	O 66
+ *  min()			//CH 79	E 79	F 75	S 11.1	O 66
+ *  repeating-conic-gradient()	//CH 69	E 79	F 83	S 12.1	O 56
+ */
+
+/**************************
+ *    *
+ **************************
+ */
+
+@mixin text-combine-upright($value){
+	-webkit-text-combine-upright: $value;	//S 5.1-all
+	text-combine-upright: $value;
+}
+@mixin text-emphasis($value){
+	-webkit-text-emphasis: $value;		//CH 25-all, O 15-all
+	text-emphasis: $value;
+}
+@mixin text-emphasis-color($value){
+	-webkit-text-emphasis-color: $value;	//O 15-all
+	text-emphasis-color: $value;
+}
+@mixin text-emphasis-position($value){
+	-webkit-text-emphasis-position: $value;	//O 15-all
+	text-emphasis-position: $value;
+}
+@mixin text-emphasis-style($value){
+	-webkit-text-emphasis-style: $value;	//O 15-all
+	text-emphasis-style: $value;
+}
+@mixin text-align-last($value){
+	-moz-text-align-last: $value;		//F 12-49
+	text-align-last: $value;
+}
+/*
+ * Always need prefix:
+ *  backface-visibility
+ *  box-decoration-break
+ *  font-variant-ligatures
+ *  hyphens
+ *  mask
+ *  mask-clip
+ *  mask-composite
+ *  mask-image
+ *  mask-origin
+ *  mask-position
+ *  mask-repeat
+ *  mask-size
+ *  tab-size
+ *  text-combine-upright
+ *  text-emphasis
+ *  text-emphasis-color
+ *  text-emphasis-position
+ *  text-emphasis-style
+ *  text-orientation
+ *  user-select
+ *  :fullscreen
+ *  ::placeholder
+ *  :read-only
+ *  :read-write
+ *  ::selection
+ */
+
+@mixin backface-visibility($value){
+	-webkit-backface-visibility: $value;	//CH 12-36, S 4-all, O 15-23
+	-moz-backface-visibility: $value;	//F 10-16
+	backface-visibility: $value;
+}
+@mixin box-decoration-break($value){
+	-webkit-box-decoration-break: $value;	//CH 22-all, S 6.1-all, O 11.5-all
+	box-decoration-break: $value;
+}
+@mixin font-variant-ligatures($value){
+	-webkit-font-variant-ligatures: $value;	//S 7-all, O 19-all
+	font-font-variant-ligatures: $value;
+}
+@mixin hyphens ($value) {
+	-webkit-hyphens: $value;		//S 5.1-all
+	-ms-hyphens: $value;			//E 10-79
+	hyphens: $value;
+}
+@mixin mask($value){
+	-webkit-mask: $value;			//CH 4-all, S 4-all, O 15-all
+	mask: $value;
+}
+@mixin mask-clip($value){
+	-webkit-mask-clip: $value;		//CH 4-all, E 79-all, S 4-all, O 15-all
+	mask-clip: $value;
+}
+@mixin mask-composite($value){
+	-webkit-mask-composite: $value;		//CH 4-all, E 18-all, S 3.1-all, O 15-all
+	mask-composite: $value;
+}
+@mixin mask-image($value){
+	-webkit-mask-image: $value;		//CH 4-all, E 79-all, S 4-all, O 15-all
+	mask-image: $value;
+}
+@mixin mask-origin($value){
+	-webkit-mask-origin: $value;		//CH 4-all, E 79-all, S 4-all, O 15-all
+	mask-origin: $value;
+}
+@mixin mask-position($value){
+	-webkit-mask-position: $value;		//CH 4-all, E 79-all, S 4-all, O 15-all
+	mask-position: $value;
+}
+@mixin mask-repeat($value){
+	-webkit-mask-repeat: $value;		//CH 4-all, E 79-all, S 3.1-all, O 15-all
+	mask-repeat: $value;
+}
+@mixin mask-size($value){
+	-webkit-mask-size: $value;		//CH 4-all, E 79-all, S 4-all, O 15-all
+	mask-size: $value;
+}
+@mixin tab-size($value){
+	-moz-tab-size: $value;			//F 4-all
+	-o-tab-size: $value;			//F 10.6-15
+	tab-size: $value;
+}
+@mixin text-orientation($value){
+	-webkit-text-orientation: $value;	//O 35-all
+	text-orientation: $value;
+}
+@mixin user-select($value){
+	-webkit-user-select: $value;		//CH 6-54, S 3.1-all, O 15-41
+	-moz-user-select: $value;		//F 2-69
+	-ms-user-select: $value;		//E 10-79
+	user-select: $value;
+}
+@mixin fullscreen($property) {
+	#{$property}:-webkit-full-screen {
+		@content;
+	}					//CH 15-71, S 3.1-all, O 15-58
+	#{$property}:-moz-full-screen {
+		@content;
+	}					//F 9-64
+	#{$property}:-ms-fullscreen {
+		@content;
+	}					//E 11-12
+	#{$property}:fullscreen {
+		@content;
+	}
+}
+@mixin placeholder($property) {
+	#{$property}::-webkit-placeholder {
+		@content;
+	}					//CH 4-57, E 12-all, S 5-10.1, O 15-44
+	#{$property}::-moz-placeholder {
+		@content;
+	}					//F 4-51
+	#{$property}::-ms-placeholder {
+		@content;
+	}					//E 10-12
+	#{$property}::placeholder {
+		@content;
+	}
+}
+@mixin read-only($property) {
+	#{$property}:-moz-read-only {
+		@content;
+	}					//F 3-78
+	#{$property}:read-only {
+		@content;
+	}
+}
+@mixin read-write($property) {
+	#{$property}:-moz-read-write {
+		@content;
+	}					//F 3-78
+	#{$property}:read-write {
+		@content;
+	}
+}
+@mixin selection($property) {
+	#{$property}::-moz-selection {
+		@content;
+	}					//F 2-62
+	#{$property}::selection {
+		@content;
+	}
+}
+
+// Some other prefixes, that are unnecessary:
+
+@mixin align-content($value){
+	-webkit-align-content: $value; 		//S 7-9
+	align-content: $value;
+}
+@mixin align-items($value){
+	-webkit-align-items: $value; 		//S 7-9
+	align-items: $value;
+}
+@mixin align-self($value){
+	-webkit-align-self: $value; 		//S 7-9
+	align-self: $value;
+}
+@mixin animation($value){
+	-webkit-animation: $value; 		//CH 4-43, S 4-9, O 15-30
+	-moz-animation: $value; 		//F 5-16
+	-o-animation: $value; 			//O 12-15
+	animation: $value;
+}
+@mixin animation-delay($value){
+	-webkit-animation-delay: $value;	//CH 4-43, S 4-9, O 15-30
+	-moz-animation-delay: $value;		//F 5-16
+	-o-animation-delay: $value;		//O 12-15
+	animation-delay: $value;
+}
+@mixin animation-direction($value){
+	-webkit-animation-direction: $value;	//CH 4-43, S 4-9, O 15-30
+	-moz-animation-direction: $value;	//F 5-16
+	-o-animation-direction: $value;		//O 12-15
+	animation-direction: $value;
+}
+@mixin animation-duration($value){
+	-webkit-animation-duration: $value;	//CH 3-43, S 4-9, O 15-30
+	-moz-animation-duration: $value;	//F 5-16
+	-o-animation-duration: $value;		//O 12-15
+	animation-duration: $value;
+}
+@mixin animation-fill-mode($value){
+	-webkit-animation-fill-mode: $value;	//CH 4-43, S 4-9, O 15-30
+	-moz-animation-fill-mode: $value;	//F 5-16
+	-o-animation-fill-mode: $value;		//O 12-15
+	animation-fill-mode: $value;
+}
+@mixin animation-iteration-count($value){
+	-webkit-animation-iteration-count: $value;	//CH 4-43, S 4-9, O 15-30
+	-moz-animation-iteration-count: $value;		//F 5-16
+	-o-animation-iteration-count: $value;		//O 12-15
+	animation-iteration-count: $value;
+}
+@mixin animation-name($value){
+	-webkit-animation-name: $value;		//CH 4-43, S 4-9, O 15-30
+	-moz-animation-name: $value;		//F 5-16
+	-o-animation-name: $value;		//O 12-15
+	animation-name: $value;
+}
+@mixin animation-play-state($value){
+	-webkit-animation-play-state: $value;	//CH 4-43, S 4-9, O 15-30
+	-moz-animation-play-state: $value;	//F 5-16
+	-o-animation-play-state: $value;	//O 12-15
+	animation-play-state: $value;
+}
+@mixin animation-timing-function($value){
+	-webkit-animation-timing-function: $value;	//CH 4-43, S 4-9, O 15-30
+	-moz-animation-timing-function: $value;		//F 5-16
+	-o-animation-timing-function: $value;		//O 12-15
+	animation-timing-function: $value;
+}
+@mixin background-size($value){
+	-webkit-background-size: $value;	//CH 1-4, S 3-4.1
+	-moz-background-size: $value;		//F 3.6-4
+	-o-background-size: $value;		//O 10-10.5
+	background-size: $value;
+}
+@mixin border-bottom-left-radius($value){
+	-webkit-border-bottom-left-radius: $value;	//CH 4-5, S 3.1-5
+	-moz-border-bottom-left-radius: $value;		//F 3-4
+	border-bottom-left-radius: $value;
+}
+@mixin border-bottom-right-radius($value){
+	-webkit-border-bottom-right-radius: $value;	//CH 4-5, S 3.1-5
+	-moz-border-bottom-right-radius: $value;	//F 3-4
+	border-bottom-right-radius: $value;
+}
+@mixin border-image($value){
+	-webkit-border-image: $value;		//CH 4-16, S 3.1-6
+	-moz-border-image: $value;		//F 3.5-15
+	-o-border-image: $value;		//O 11-15
+	border-image: $value;
+}
+@mixin border-radius($value){
+	-webkit-border-radius: $value;		//CH 4-5, S 3.1-5
+	-moz-border-radius: $value;		//F 3-4
+	border-radius: $value;
+}
+@mixin border-top-left-radius($value){
+	-webkit-border-top-left-radius: $value;	//CH 4-5, S 3.1-5
+	-moz-border-top-left-radius: $value;	//F 3-4
+	border-top-left-radius: $value;
+}
+@mixin border-bottom-right-radius($value){
+	-webkit-border-top-right-radius: $value;	//CH 4-5, S 3.1-5
+	-moz-border-top-right-radius: $value;		//F 3-4
+	border-top-right-radius: $value;
+}
+@mixin box-shadow($value){
+	-webkit-box-shadow: $value;		//CH 4-10, S 3.1-5.1
+	-moz-box-shadow: $value;		//F 3.5-4
+	box-shadow: $value;
+}
+@mixin box-sizing($value){
+	-webkit-box-sizing: $value;		//CH 4-10, S 3.2-5.1
+	-moz-box-sizing: $value;		//F 2-29
+	box-sizing: $value;
+}
+@mixin clip-path($value){
+	-webkit-clip-path: $value;		//CH 23-55, S 6.1-9.1, O 15-42
+	clip-path: $value;
+}
+@mixin column-count($value){
+	-webkit-column-count: $value;		//CH 4-50, S 3.1-9, O 15-37
+	-moz-column-count: $value;		//F 2-52
+	column-count: $value;
+}
+@mixin column-fill($value){
+	-webkit-column-fill: $value;		//S 7-10
+	-moz-column-fill: $value;		//F 13-52
+	column-fill: $value;
+}
+@mixin column-rule($value){
+	-webkit-column-rule: $value;		//CH 4-50, S 3.1-9, O 15-37
+	-moz-column-rule: $value;		//F 2-52
+	column-rule: $value;
+}
+@mixin column-rule-color($value){
+	-webkit-column-rule-color: $value;	//CH 4-50, S 3.1-9, O 15-37
+	-moz-column-rule-color: $value;		//F 2-52
+	column-rule-color: $value;
+}
+@mixin column-rule-style($value){
+	-webkit-column-rule-style: $value;	//CH 4-50, S 3.1-9, O 15-37
+	-moz-column-rule-style: $value;		//F 2-52
+	column-rule-style: $value;
+}
+@mixin column-rule-width($value){
+	-webkit-column-rule-width: $value;	//CH 4-50, S 3.1-9, O 15-37
+	-moz-column-rule-width: $value;		//F 2-52
+	column-rule-width: $value;
+}
+@mixin column-span($value){
+	-webkit-column-span: $value;		//CH 4-50, S 3.1-9, O 15-37
+	column-span: $value;
+}
+@mixin column-width($value){
+	-webkit-column-width: $value;		//CH 4-50, S 3.1-9, O 15-37
+	-moz-column-width: $value;		//F 2-52
+	column-width: $value;
+}
+@mixin columns($value){
+	-webkit-columns: $value;		//CH 4-50, S 3.1-9, O 15-37
+	-moz-columns: $value;			//F 9-52
+	columns: $value;
+}
+@mixin filter($value){
+	-webkit-filter: $value;			//CH 18-53, S 6-9.1, O 15-40
+	filter: $value;
+}
+@mixin flex ($value) {
+	-webkit-flex: $value;			//CH 21-29, S 6.1-9
+	-moz-flex: $value;			//F 18-28
+	-ms-flex: $value;			//E 10-11
+	flex: $value;
+}
+@mixin flex-basis($value){
+	-webkit-flex-basis: $value;
+	-moz-flex-basis: $value;		//F 18-28
+	flex-basis: $value;
+}
+@mixin flex-direction($value){
+	-webkit-flex-direction: $value;		//CH 21-29, S 6.1-9
+	-moz-flex-direction: $value;		//F 18-28
+	flex-direction: $value;
+}
+@mixin flex-flow($value){
+	-webkit-flex-flow: $value;		//CH 21-29, S 6.1-9
+	-moz-flex-flow: $value;			//F 18-28
+	flex-flow: $value;
+}
+@mixin flex-grow($value){
+	-webkit-flex-grow: $value;		//CH 21-29, S 6.1-9
+	-moz-flex-grow: $value;			//F 18-28
+	flex-grow: $value;
+}
+@mixin flex-shrink($value){
+	-webkit-flex-shrink: $value;		//CH 21-29, S 6.1-9
+	-moz-flex-shrink: $value;		//F 18-28
+	flex-shrink: $value;
+}
+@mixin flex-wrap($value){
+	-webkit-flex-wrap: $value;		//CH 21-29, S 6.1-9
+	-moz-flex-wrap: $value;			//F 18-28
+	flex-wrap: $value;
+}
+@mixin font-feature-settings($value){
+	-webkit-font-feature-settings: $value;	//CH 16-48, O 15-35
+	-moz-font-feature-settings: $value;	//F 15-34
+	font-feature-settings: $value;
+}
+@mixin font-kerning($value){
+	-webkit-font-kerning: $value;		//CH 29-33, S 7-9.1, O 16-20.1
+	font-font-kerning: $value;
+}
+@mixin justify-content($value){
+	-webkit-justify-content: $value;	//CH 21-29, S 6.1-9
+	-moz-justify-content: $value;		//F 18-28
+	justify-content: $value;
+}
+@mixin keyframes($value) {
+	@-webkit-keyframes #{$value} { 
+		@content;
+	}					//CH 4-43, S 4-9, O 15-30
+	@-moz-keyframes #{$value} {
+		@content;
+	}					//F 5-16
+	@-o-keyframes #{$value} {
+		@content;
+	}					//O 12-15
+	@keyframes #{$value} {
+		@content;
+	}
+}
+@mixin order($value){
+	-webkit-order: $value;			//CH 21-29, S 6.1-9
+	-moz-order: $value;			//F 18-28
+	order: $value;
+}
+@mixin overflow-x($value){
+	-ms-overflow-x: $value;			//E 8-9
+	overflow-x: $value;
+}
+@mixin overflow-y($value){
+	-ms-overflow-y: $value;			//E 8-9
+	overflow-y: $value;
+}
+@mixin perspective($value){
+	-webkit-perspective: $value;		//CH 12-36, S 4.0.3-9, O 15-23
+	-moz-perspective: $value;		//F 10-16
+	perspective: $value;
+}
+@mixin perspective-origin($value){
+	-webkit-perspective-origin: $value;	//CH 12-36, S 4.0.3-9, O 15-23
+	-moz-perspective-origin: $value;	//F 10-16
+	perspective-origin: $value;
+}
+@mixin resize($value){
+	-moz-resize: $value;			//F 4-5
+	resize: $value;
+}
+@mixin text-decoration-color($value){
+	-webkit-text-decoration-color: $value;	//S 7.1-12.1
+	-moz-text-decoration-color: $value;	//F 6-36
+	text-decoration-color: $value;
+}
+@mixin text-decoration-line($value){
+	-webkit-text-decoration-line: $value;	//S 7.1-12.1
+	-moz-text-decoration-line: $value;	//F 6-36
+	text-decoration-line: $value;
+}
+@mixin text-decoration-style($value){
+	-moz-text-decoration-style: $value;	//F 6-36
+	text-decoration-style: $value;
+}
+@mixin text-overflow($value){
+	-o-text-overflow: $value;		//O 9-11
+	text-overflow: $value;
+}
+@mixin transform($value) {
+	-webkit-transform: $value;		//CH 4-36, S 3.2-9, O 15-23
+	-moz-transform: $value;			//F 3.5-16
+	-ms-transform: $value;			//E 9-10
+	-o-transform: $value;			//O 10.5-15
+	transform: $value;
+}
+@mixin transform-origin ($value) {
+	-webkit-transform-origin: $value;	//CH 4-36, S 3.2-9, O 15-23
+	-moz-transform-origin: $value;		//F 3.5-16
+	-ms-transform-origin: $value;		//E 9-10
+	-o-transform-origin: $value;		//O 10.5-15
+	transform-origin: $value;
+}
+@mixin transform-style ($value) {
+	-webkit-transform-style: $value;	//CH 12-36, S 4-9, O 15-23
+	-moz-transform-style: $value;		//F 10-16
+	transform-style: $value;
+}
+@mixin transition($value) {
+	-webkit-transition: $value;		//CH 4-26, S 3.1-6.1
+	-moz-transition: $value;		//F 4-16
+	-o-transition: $value;			//O 10.5-12.1
+	transition: $value;
+}
+@mixin transition-delay($value) {
+	-webkit-transition-delay: $value;	//CH 4-26, S 3.1-6.1
+	-moz-transition-delay: $value;		//F 4-16
+	-o-transition-delay: $value;		//O 10.5-12.1
+	transition-delay: $value;
+}
+@mixin transition-duration($value) {
+	-webkit-transition-duration: $value;	//CH 4-26, S 3.1-6.1
+	-moz-transition-duration: $value;	//F 4-16
+	-o-transition-duration: $value;		//O 10.5-12.1
+	transition-duration: $value;
+}
+@mixin transition-property($value) {
+	-webkit-transition-property: $value;	//CH 4-26, S 3.1-6.1
+	-moz-transition-property: $value;	//F 4-16
+	-o-transition-property: $value;		//O 10.5-12.1
+	transition-property: $value;
+}
+@mixin transition-timing-function($value) {
+	-webkit-transition-timing-function: $value;	//CH 4-26, S 3.1-6.1
+	-moz-transition-timing-function: $value;	//F 4-16
+	-o-transition-timing-function: $value;		//O 10.5-12.1
+	transition-timing-function: $value;
+}
+@mixin calc($property, $default, $value) {
+	#{$property}: $default;
+	#{$property}: -webkit-calc(#{$value});	//CH 19-26, S 6-7
+	#{$property}: -moz-calc(#{$value});	//F 4-16
+	#{$property}: calc(#{$value});
+}
+@mixin linear-gradient($default, $value) {
+	background-color: $default;
+	background-image: -webkit-linear-gradient($value);	//CH 10-26, S 5.1-6.1
+	background-image: -moz-linear-gradient($value);		//F 3.6-16
+	background-image: -o-linear-gradient($value);		//O 11.1-12.1
+	background-image: linear-gradient($value);
+}
+@mixin radial-gradient($default, $value) {
+	background-color: $default;
+	background-image: -webkit-radial-gradient($value);	//CH 10-26, S 5.1-6.1
+	background-image: -moz-radial-gradient($value);		//F 3.6-16
+	background-image: -o-radial-gradient($value);		//O 11.6-12.1
+	background-image: radial-gradient($value);
+}
+@mixin repeating-linear-gradient($default, $value) {
+	background-color: $default;
+	background-image: -webkit-repeating-linear-gradient($value);	//CH 10-26, S 5.1-6.1
+	background-image: -moz-repeating-linear-gradient($value);	//F 3.6-16
+	background-image: -o-repeating-linear-gradient($value);		//O 11.1-12.1
+	background-image: repeating-linear-gradient($value);
+}
+@mixin repeating-radial-gradient($default, $value) {
+	background-color: $default;
+	background-image: -webkit-repeating-radial-gradient($value);	//CH 10-26, S 5.1-6.1
+	background-image: -moz-repeating-radial-gradient($value);	//F 3.6-16
+	background-image: -o-repeating-radial-gradient($value);		//O 11.1-12.1
+	background-image: repeating-radial-gradient($value);
+}
