@@ -2,8 +2,7 @@
 	"index": "home",
 	"news": "news",
 	"recipes": "recipes",
-
 	"recipe": "recipe",
-	"schaumrolle": "cream_roll",
-	"langos": "langoustine"
+	"schaumrolle": "schaumrolle",
+	"langos": "langos"
 }
