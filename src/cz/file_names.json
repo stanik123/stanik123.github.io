@@ -2,9 +2,8 @@
 	"index": "domu",
 	"news": "novinky",
 	"recipes": "recepty",
-	"e404": "e404",
 
 	"recipe": "recept",
-	"cream_roll": "kremrole",
-	"langoustine": "langos"
+	"schaumrolle": "kremrole",
+	"langos": "langos"
 }

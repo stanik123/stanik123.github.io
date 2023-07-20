@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="1024" height="512" viewBox="0 0 1024 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <g stroke-linecap="round" stroke-linejoin="round" stroke-width="8" stroke="#202124">
     <path d="m152 272c-10 48-88 184-88 184-8 24 8 32 32 32h192c24 0 40-8 32-32 0 0-78-136-88-184-9.801-47.04 0-80 0-80h-80s9.801 32.96 0 80z" fill="#e8eaed"/>
@@ -24,8 +24,12 @@
     </g>
   </g>
   <g font-family="'Patrick Hand'" fill="#202124" font-size="224px">
-    <text x="330" y="260">MAKE</text>
-    <text font-size="168px" text-anchor="middle"><tspan x="875" y="160">I</tspan><tspan x="875" y="285">T</tspan></text>
-    <text x="370" y="460" fill="#e8eaed">EDIBLE</text>
+    <!--
+				<text x="330" y="260">MAKE</text>
+				<text font-size="168px" text-anchor="middle"><tspan x="875" y="160">I</tspan><tspan x="875" y="285">T</tspan></text>
+				<text x="370" y="460" fill="#e8eaed">EDIBLE</text>
+				-->
+				<text x="330" y="260">CHEMI</text>
+				<text x="360" y="460" fill="#e8eaed">GASTRO</text>
   </g>
 </svg>
