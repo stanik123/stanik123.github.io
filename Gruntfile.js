@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: "src/",
 					flatten: false,
-					src: ["**/*.html", "!*includes*", "!*templates*"],
+					src: ["**/*.html", "!*/includes/*", "!*templates/*"],
 					dest: "docs/",
 					ext: ".html",
 					rename: function (dest, src) {
