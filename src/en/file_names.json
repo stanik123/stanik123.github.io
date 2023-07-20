@@ -1,8 +1,8 @@
 {
-	"index": "domu",
-	"news": "novinky",
-	"recipes": "recepty",
-	"recipe": "recept",
-	"cream_roll": "kremrole",
-	"langoustine": "langos"
+	"index": "home",
+	"news": "news",
+	"recipes": "recipes",
+	"recipe": "recipe",
+	"cream_roll": "cream_roll",
+	"langoustine": "langoustine"
 }
