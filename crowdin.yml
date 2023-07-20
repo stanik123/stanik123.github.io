@@ -2,6 +2,10 @@ files:
   - source: /src/cz/*.html
     translation: /src/%two_letters_code%/%original_file_name%
   - source: /src/cz/includes/*.html
+    ignore:
+      - /src/cz/includes/head_defaults.html
     translation: /src/%two_letters_code%/includes/%original_file_name%
   - source: /src/cz/file_names.json
     translation: /src/%two_letters_code%/%original_file_name%
+  - source: /src/cz/recipe/*.html
+    translation: /src/%two_letters_code%/recipe/%original_file_name%
