@@ -3,7 +3,7 @@
 <head>
 	<base href="../../">
 
-	<!--(bake /src/cz/includes/head_defaults.html)-->
+	<!--(bake ../includes/head_defaults.html)-->
 
 	<title>Kremrole - Chemi Gastro</title>
 	<meta property="og:title" content="Kremrole - Chemi Gastro">
@@ -15,72 +15,18 @@
 	<meta property="og:image:type" content="image/webp">
 </head>
 <body>
-<!--(bake /src/cz/includes/header.html)-->
-<main>
-	<header>
-		<img src="images/recipes/kremrole.webp" alt="Fotka výstavních ">
-		<h1>Kremrole</h1>
-	</header>
+	<!--(bake ../includes/nav.html)-->
+	<main>
+		<img src="images/recipes/kremrole.webp" alt="Fotka výstavních kremrolí" id="backgroundImg">
+		<header>
+			<h1>Kremrole</h1>
+		</header>
 
+		<article id="aboutRecipe">
+			<section id="aboutFood">
+				<p></p>
+			</section>
 
-	<article>
-		<section class="textBlock">
-			<p></p>
-		</section>
-		<section id="ingredients">
-			<h2>Ingredience</h2>
-			<div id="portions">Počet kremrolí: <span> 10 </span></div>
-			<h3>Těsto</h3>
-			<ul>
-				<li>
-					<img alt="Mouka" src="images/icons/ingredients/flour.svg">
-					<span>300</span><span>g</span>
-					<span>Hladká mouka</span>
-				</li>
-				<li>
-					<img alt="Máslo" src="images/icons/ingredients/butter.svg">
-					<span>250</span><span>g</span>
-					<span>Máslo / Hera</span>
-				</li>
-				<li>
-					<img alt="Žloutek" src="images/icons/ingredients/egg_yolk.svg">
-					<span>1</span><span>ks</span>
-					<span>Žloutek</span>
-				</li>
-				<li>
-					<img alt="Mléko" src="images/icons/ingredients/milk.svg">
-					<span>100</span><span>ml</span>
-					<span>Smetana ke šlehání</span>
-				</li>
-			</ul>
-			<h3>Náplň</h3>
-			<ul>
-				<li>
-					<img alt="Bílek" src="images/icons/ingredients/egg_white.svg">
-					<span>3</span><span>ks</span>
-					<span>Bílky</span>
-				</li>
-				<li>
-					<img alt="Cukr" src="images/icons/ingredients/sugar.svg">
-					<span>210</span><span>g</span>
-					<span>Cukr krystal</span>
-				</li>
-				<li>
-					<img alt="Voda" src="images/icons/ingredients/water.svg">
-					<span>2</span><span>lžíce</span>
-					<span>Voda</span>
-				</li>
-				<li>
-					<img alt="Citrón" src="images/icons/ingredients/lemon.svg">
-					<span>Pár</span><span>kapek</span>
-					<span>Citronová šťáva</span>
-				</li>
-				<li>
-					<img alt="Cukr" src="images/icons/ingredients/sugar.svg">
-					<span>1</span><span>lžička</span>
-					<span>Cukr moučka</span>
-				</li>
-			</ul>
 			<section id="times">
 				<figure>
 					<img alt="" src="images/icons/clock.svg">
@@ -95,39 +41,100 @@
 					<figcaption>Horní a spodní ohřev</figcaption>
 				</figure>
 			</section>
+
+			<section id="nutrition">
+				<p></p>
+			</section>
+		</article>
+
+		<article id="recipe">
+			<section id="ingredients">
+				<h2>Ingredience</h2>
+				<div id="portions">Počet kremrolí: <span> 10 </span></div>
+				<h3>Těsto</h3>
+				<ul>
+					<li>
+						<img alt="Mouka" src="images/icons/ingredients/flour.svg">
+						<span>300</span><span>g</span>
+						<span>Hladká mouka</span>
+					</li>
+					<li>
+						<img alt="Máslo" src="images/icons/ingredients/butter.svg">
+						<span>250</span><span>g</span>
+						<span>Máslo / Hera</span>
+					</li>
+					<li>
+						<img alt="Žloutek" src="images/icons/ingredients/egg_yolk.svg">
+						<span>1</span><span>ks</span>
+						<span>Žloutek</span>
+					</li>
+					<li>
+						<img alt="Mléko" src="images/icons/ingredients/milk.svg">
+						<span>100</span><span>ml</span>
+						<span>Smetana ke šlehání</span>
+					</li>
+				</ul>
+				<h3>Náplň</h3>
+				<ul>
+					<li>
+						<img alt="Bílek" src="images/icons/ingredients/egg_white.svg">
+						<span>3</span><span>ks</span>
+						<span>Bílky</span>
+					</li>
+					<li>
+						<img alt="Cukr" src="images/icons/ingredients/sugar.svg">
+						<span>210</span><span>g</span>
+						<span>Cukr krystal</span>
+					</li>
+					<li>
+						<img alt="Voda" src="images/icons/ingredients/water.svg">
+						<span>2</span><span>lžíce</span>
+						<span>Voda</span>
+					</li>
+					<li>
+						<img alt="Citrón" src="images/icons/ingredients/lemon.svg">
+						<span>Pár</span><span>kapek</span>
+						<span>Citronová šťáva</span>
+					</li>
+					<li>
+						<img alt="Cukr" src="images/icons/ingredients/sugar.svg">
+						<span>1</span><span>lžička</span>
+						<span>Cukr moučka</span>
+					</li>
+				</ul>
+			</section>
+
+			<section id="procedure">
+				<h2>Procedúra</h2>
+				<h3>Postup přípravy těsta</h3>
+				<p>Mouku prosejeme do mísy nebo na vál.</p>
+				<p>Přidáme změklé máslo, žloutek a smetanu.</p>
+				<p>Zpracujeme v nelepivé těsto.</p>
+				<p>Dáme odležet do lednice na 2 hodiny, popřípadě přes noc.</p>
+				<h3>Pečení</h3>
+				<p>Předehřejeme si troubu na 220 °C v režimu Horní a spodní ohřev</p>
+				<p>Vlastní těsto nebo koupené listové těsto rozdělíme na půl.</p>
+				<p>Půlku těsta rozválíme na čtverec 30x30 cm</p>
+				<p>Rozkrájíme na deset proužku (šířka 3 cm)</p>
+				<p>Trubičky pomažeme rozpuštěným máslem nebo nerozpuštěným podle obrázku</p>
+				<p>Těsto navineme na trubičky a válením trubiček přimáčkneme</p>
+				<p>Dáme péct do trouby na 15 min</p>
+				<p>Kremrole sundáváme z trubiček ještě za tepla</p>
+				<p>Zopakujeme pro druhou polovinu těsta</p>
+				<h3>Náplň</h3>
+				<p>Na plotýnce na středním stupni vytvoříme z cukru a vody cukrový rozvar</p>
+				<p>Bílky šleháme na nejvyšší stupeň</p>
+				<p>Jakmile začnou tuhnout, zašleháme po třetinách cukrový rozvar</p>
+				<p>Nakonec přidáme citronovou šťávu</p>
+				<p>Vychladlé kremrole plníme tak, aby byly zcela zaplněné. Dáváme si pozor aby jsme neměli uprostřed vzduch</p>
+			</section>
+		</article>
+
+		<section id="comments">
+			<p> </p>
 		</section>
-
-		<section id="procedure">
-			<h2>Postup přípravy těsta</h2>
-			<p>Mouku prosejeme do mísy nebo na vál.</p>
-			<p>Přidáme změklé máslo, žloutek a smetanu.</p>
-			<p>Zpracujeme v nelepivé těsto.</p>
-			<p>Dáme odležet do lednice na 2 hodiny, popřípadě přes noc.</p>
-			<h2>Pečení</h2>
-			<p>Předehřejeme si troubu na 220 °C v režimu Horní a spodní ohřev</p>
-			<p>Vlastní těsto nebo koupené listové těsto rozdělíme na půl.</p>
-			<p>Půlku těsta rozválíme na čtverec 30x30 cm</p>
-			<p>Rozkrájíme na deset proužku (šířka 3 cm)</p>
-			<p>Trubičky pomažeme rozpuštěným máslem nebo nerozpuštěným podle obrázku</p>
-			<p>Těsto navineme na trubičky a válením trubiček přimáčkneme</p>
-			<p>Dáme péct do trouby na 15 min</p>
-			<p>Kremrole sundáváme z trubiček ještě za tepla</p>
-			<p>Zopakujeme pro druhou polovinu těsta</p>
-			<h2>Náplň</h2>
-			<p>Na plotýnce na středním stupni vytvoříme z cukru a vody cukrový rozvar</p>
-			<p>Bílky šleháme na nejvyšší stupeň</p>
-			<p>Jakmile začnou tuhnout, zašleháme po třetinách cukrový rozvar</p>
-			<p>Nakonec přidáme citronovou šťávu</p>
-			<p>Vychladlé kremrole plníme tak, aby byly zcela zaplněné. Dáváme si pozor aby jsme neměli uprostřed vzduch</p>
-		</section>
-	</article>
-
-
-	<section>
-		<p> </p>
-	</section>
-	<!--(bake /src/cz/includes/footer.html)-->
-</main>
-<script src="scripts/scripts.js"></script>
+		<!--(bake ../includes/footer.html)-->
+	</main>
+	<script src="scripts/scripts.js"></script>
 </body>
 </html>
