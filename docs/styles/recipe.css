@@ -2,49 +2,83 @@
 	Recipe templates for Make it Edible
 				by stanik123
  ****************************************/
+#aboutRecipe {
+  min-height: 50vh;
+  position: relative;
+  background: var(--BG);
+  margin-bottom: 2rem;
+}
+#aboutRecipe::after, #aboutRecipe::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  display: block;
+  height: 3rem;
+  background-size: 3rem 100%;
+}
+#aboutRecipe::before {
+  background-image: linear-gradient(315deg, var(--BG) 25%, transparent 25%), linear-gradient(45deg, var(--BG) 25%, transparent 25%);
+  top: calc(-3rem + 2px);
+  background-position: 0 -1px;
+}
+#aboutRecipe::after {
+  background-image: linear-gradient(135deg, var(--BG) 25%, transparent 25%), linear-gradient(225deg, var(--BG) 25%, transparent 25%);
+  top: calc(100% - 2px);
+  background-position: 0 1px;
+}
+
+#recipe {
+  background: var(--frontBG);
+  border: 0.3rem dashed var(--border);
+  margin: 3rem 2rem;
+  width: calc(100% - 4rem);
+  display: flex;
+}
+@media (max-width: 70em) {
+  #recipe {
+    flex-direction: column;
+  }
+}
+@media (max-width: 40em) {
+  #recipe {
+    margin: 2rem 1rem;
+    width: calc(100% - 2rem);
+    border-width: 0.2rem;
+  }
+}
+@media (max-width: 20em) {
+  #recipe {
+    margin: 2rem 0;
+    width: 100%;
+    border-width: 0.2rem 0;
+  }
+}
+
 #ingredients {
-  display: grid;
-  grid-template: "header header" "portions portions" "lefth righth" "left right" "times times";
-  background: var(--frontBG);
-  padding: 0 2em 2em;
-}
-#ingredients h2 {
-  grid-area: header;
-  font-size: 3em;
-  line-height: 2em;
-  text-align: center;
-}
-#ingredients h3 {
-  font-size: 2em;
-  line-height: 2em;
-  background: var(--frontBG);
-  padding: 1em 1em 0;
-}
-#ingredients h3:first-of-type {
-  grid-area: lefth;
-}
-#ingredients h3:nth-of-type(2) {
-  grid-area: righth;
+  width: calc((2 - var(--phi)) * 100%);
+  border-right: 0.2rem dashed var(--border);
+  /*display: grid;
+  grid-template:
+     	'header header'
+     	'portions portions'
+     	'lefth righth'
+     	'left right';*/
+  padding-right: 0.5em;
 }
 #ingredients ul {
   width: 100%;
 }
-#ingredients ul:first-of-type {
-  grid-area: left;
-}
-#ingredients ul:nth-of-type(2) {
-  grid-area: right;
-}
 #ingredients ul li {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   background: var(--frontBG);
 }
 #ingredients ul li img {
-  height: 3em;
+  height: 2em;
   padding: 0.25em 0.25em 0.25em 0;
-  flex-basis: 2.75em;
+  flex-basis: 1.75em;
 }
 #ingredients ul li span {
   padding: 0.25em 0.2em 0.25em 0;
@@ -52,55 +86,41 @@
 #ingredients ul li span:nth-of-type(2) {
   padding-right: 0.5em;
 }
-@media (max-width: 50em) {
+@media (max-width: 70em) {
   #ingredients {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    border-right: none;
+    border-bottom: 0.2rem dashed var(--border);
+    padding: 0 0 0 2em;
   }
-  #ingredients ul {
-    padding-left: 4em;
-  }
-}
-@media (max-width: 40em) {
   #ingredients ul {
     padding-left: 2em;
   }
 }
-@media (max-width: 30em) {
+@media (max-width: 40em) {
   #ingredients {
     padding: 0;
   }
-  #ingredients h2 {
-    font-size: 2rem;
-  }
-  #ingredients h3 {
-    padding: 0 1em;
-    font-size: 1.7rem;
-  }
   #ingredients ul {
-    padding-left: 1em;
+    padding-left: 0;
   }
+}
+@media (max-width: 30em) {
   #ingredients ul li img {
-    height: 2.5em;
-    flex-basis: 2.25em;
+    height: 1.5em;
+    flex-basis: 1.25em;
   }
   #ingredients ul li, #ingredients #portions {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 20em) {
-  #ingredients h2 {
-    font-size: 2rem;
-  }
-  #ingredients h3 {
-    font-size: 1.5rem;
-  }
   #ingredients ul li img {
     height: 2em;
     flex-basis: 1.75em;
   }
   #ingredients ul li, #ingredients #portions {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
   #ingredients #portions button {
     height: 1em;
@@ -111,9 +131,8 @@
 }
 
 #portions {
-  grid-area: portions;
-  font-size: 1.4em;
-  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0.5em;
 }
 #portions button {
   width: 1.5em;
@@ -134,8 +153,22 @@
   cursor: pointer;
 }
 
-#times {
-  grid-area: times;
+#procedure {
+  width: calc((var(--phi) - 1) * 100%);
+  padding-left: 2em;
+}
+#procedure p {
+  padding-left: 1em;
+  margin-top: 0.5em;
+}
+@media (max-width: 70em) {
+  #procedure {
+    width: 100%;
+  }
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/styles/recipe.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;EACC;EACA,eACI;EAKD;EACA;;AACH;EACC;EACA;EAAgB;EAChB;;AAED;EACC;EAAgB;EAChB;EACA;;AACA;EACC;;AAED;EACC;;AAGF;EACC;;AACA;EACC;;AAED;EACC;;AAED;EACC;EACA;EACG;EACA;;AACH;EACC;EACA;EACA;;AAED;EACC;;AACA;EACC;;AAKJ;EApDD;IAqDE;IACA;;EACA;IACI;;;AAGL;EACC;IACC;;;AAGF;EAhED;IAiEE;;EACA;IACC;;EAED;IACC;IACA;;EAED;IACI;;EAEJ;IACC;IAAe;;EAEhB;IACC;;;AAGF;EACC;IACC;;EAED;IACC;;EAED;IACC;IAAa;;EAEd;IACC;;EAED;IACC;IAAa;IAAY;IACzB;;;;AAKH;EACC;EACA;EACA;;AACA;EACC;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EACC;EACA;EACA;;;AAIH;EACE%22,%22file%22:%22recipe.css%22%7D */
+#comments {
+  padding: 0;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/styles/recipe.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;EACC;EACA;EACA;EACA;;AACA;EACC;EACA;EACA;EACA;EACA;EACA;EACA;;AAED;EACC;EACA;EACA;;AAED;EACC;EACA;EACA;;;AAgBF;EACC;EACA;EACA;EACA;EACA;;AACA;EAND;IAOE;;;AAED;EATD;IAUE;IACA;IACA;;;AAED;EAdD;IAeE;IACA;IACA;;;;AAIF;EACC;EACA;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;EAMG;;AAEH;EACC;;AACA;EACC;EACA;EACG;EACA;;AACH;EACC;EACA;EACA;;AAED;EACC;;AACA;EACC;;AAKJ;EA/BD;IAgCE;IACA;IACA;IACA;;EACA;IACI;;;AAGL;EAxCD;IAyCE;;EACA;IACC;;;AAGF;EACC;IACC;IAAe;;EAEhB;IACC;;;AAGF;EACC;IACC;IAAa;;EAEd;IACC;;EAED;IACC;IAAa;IAAY;IACzB;;;;AAIH;EACC;EAEA;;AACA;EACC;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EACC;EACA;EACA;;;AAIH;EACC;EAEA;;AACA;EACC;EACA;;AAED;EARD;IASE;;;;AAIF;EACC%22,%22file%22:%22recipe.css%22%7D */

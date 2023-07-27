@@ -1,56 +1,58 @@
 @charset "UTF-8";
 
 /********************************
-	NAVBAR for Make it Edible
+	NAVBAR for Chemi Gastro
 			by stanik123
  ********************************/
 
-/* Animation */
-nav, nav a, nav a i, nav a p, nav text, #logoText {
+/* Transition */
+//nav, nav a, nav a i, nav a p, nav text, #logoText, #navBar nav, #navBar nav a {
+#navBar, #navBar * {
 	transition: all 1s ease-out .1s;
-}
-#navBar nav, #navBar nav a {
-	transition:  all 1s ease-out .1s;
 }
 
 /* Text & Colors */
-#logoText {
-	font-family: PatrickHand;
-}
-nav {
+#navBar {
 	background: var(--green);
 	a {
-		font-family: PatrickHand;
 		text-decoration: none;
 		color: var(--text);
+		background-color: var(--green);
 		&:hover {
-			background: var(--dark-green);
+			background-color: var(--dark-green);
 		}
 	}
 }
 
-
+/* Layout */
 #navBar {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
-}
-nav {
+	display: flex;
+	z-index: 100;
 	a, input, label {
 		display: block;
 	}
 	input {
-		width: 0;
-		height: 0;
+		width: 0; height: 0;
 	}
-	label {
-		width: 100%;
-		height: 100%;
-		cursor: pointer;
+	a {
+		height: 4rem;
+		label {
+			width: 100%; height: 100%;
+			cursor: pointer;
+		}
+		svg {
+			height: 3rem;
+		}
 	}
-	svg {
-		height: 3rem;
+	&::before {
+		content: '';
+		display: block;
+		flex: 1 1 0;
+		order: 1;
+	}
+	#navArrow {
+		display: none;
+		order: 2;
 	}
 }
 #langSelect {
@@ -62,182 +64,158 @@ nav {
 		margin: .5rem auto;
 	}
 }
-#navArrow {
-	visibility: hidden;
+#checkLang:checked ~ #langSelect {
+	display: flex;
 }
+
+#navBar > a:nth-of-type(6), #navBar > a:nth-of-type(7), #navBar > a:nth-of-type(8) {
+	order: 2;
+}
+
+
+
+
 @media (orientation: landscape) {
-	body {
-		padding-left: 4rem;
-	}
 	#navBar {
-		height: 100vh; width: 4rem;
-	}
-	nav a {
-		height: 4rem; width: 4rem;
-		text-align: left;
-		padding: .5rem .75rem;
-		i {
-			display: inline-block; 
-			width: 2.5rem; height: 2.5rem;
-			line-height: 2.5rem; text-align: center;
-			margin-top: .25rem;
-			font-size: 1.25rem;
-			border-radius: 50%;
-			background: rgba(0, 0, 0, 0.5);
+		height: 100vh; flex: 0 0 8rem;
+		flex-direction: column;
+		a {
+			height: 3rem; width: 8rem;
+			text-align: left;
+			padding: 0 .75rem;
+			&:first-of-type {
+				height: 4rem;
+				padding: .5rem .75rem;
+			}
+			i {
+				display: inline-block; float: left;
+				width: 2.5rem; height: 2.5rem;
+				line-height: 2.5rem; text-align: center;
+				margin-top: .25rem;
+				font-size: 1.2rem;
+				/*border-radius: 50%;
+				background: rgba(0, 0, 0, 0.5);*/
+			}
+			p {
+				display: inline-block; float: left;
+				width: 4rem; height: 3rem; line-height: 3rem;
+				margin-left: 0; /*.25rem;*/
+				overflow: hidden;
+				font-size: 1.2rem;
+			}
 		}
-		p {
-			display: inline-block; position: absolute;
-			width: 0; height: 3rem; line-height: 3rem;
-			margin-left: .25rem;
-			overflow: hidden;
-			font-size: 1.1rem;
+		svg {
+			margin-left: .125rem;
 		}
 	}
+	/*#logoText {
+		transform: scaleX(1);
+		transform-origin: 37.5%;
+	}*/
 	#navArrow {
-		height: calc(100vh - 28rem);
 		i:last-child {
 			display: none;
 		}
 	}
-	#navBar:hover {
-		width: 8rem; 
+
+	#langSelect {
+		top: 10rem; left: 8rem;
+		height: 3rem; width: 27.6rem;
+		border-radius: 0 1rem 1rem 0;
 		a {
-			width: 8rem; 
-			p {
-				width: 4rem;
+			flex-basis: 25%;
+			&:last-child {
+				border-radius: 0 1rem 1rem 0;
 			}
 		}
-		#logoText {
-			transform: scaleX(1);
+	}
+	@media (max-height: 27.5em) {
+		#navBar {
+			#navArrow {
+				display: block;
+				height: 3rem;
+			}
+			& > a:nth-of-type(6) { /*Favorite*/
+				display: none;
+				left: 8rem; bottom: 3rem;
+				border-radius: 0;
+			}
+			& > a:nth-of-type(7) { /*Cooked*/
+				display: none;
+				left: 16rem; bottom: 3rem;
+				border-radius: 0 2rem 1rem 0;
+			}
 		}
-		#langSelect {
-			left: 8rem;
-			width: 27.6rem;
-		}
-	}
-	/*@media (hover: none) {
-		body { padding-left: 8rem; }
-		#navBar { width: 8rem; }
-		#navBar a {	width: 8rem; }
-		#navBar a p { width: 4rem; }
-	}*/
-	/*@media (hover: hover){*/
-	nav svg {
-		margin-left: .125rem;
-	}
-	#navBar #logoText {
-		transform: scaleX(0);
-		transform-origin: 37.5%;
-	}
-	#langSelect {
-		left: 4rem;
-		width: 24rem;
-		top: 12rem;
-		height: 4rem;
-		border-radius: 0 2rem 1rem 0;
-	}
-	#checkLang:checked ~ #langSelect {
-		display: flex;
-	}
-	#langSelect a {
-		flex-basis: 25%;
-		&:last-child {
-			border-radius: 0 2rem 1rem 0;
-		}
-	}
-	@media (max-height: 28rem) {
-		#navArrow {
-			visibility: visible;
-			height: 4rem;
-		}
-		#navBar > a:nth-of-type(6) {
-			display: none;
-			left: 8rem; top: 16rem;
-			margin: 0;
-			border-radius: 0;
-		} /*Favorite*/
-		#navBar > a:nth-of-type(7) {
-			display: none;
-			left: 16rem; top: 16rem;
-			margin: 0;
-			border-radius: 0 2rem 1rem 0;
-		} /*Cooked*/
 		#checkArrow:checked ~ a:nth-of-type(6), #checkArrow:checked ~ a:nth-of-type(7) {
 			position: fixed;
 			display: block;
 		}
-		#checkLang:checked ~ a:nth-of-type(7) {
-			border-radius: 0 0 1rem 0;
-		}
-		@media (max-height: 24rem) {
-			#navBar > a:nth-of-type(4) {
+		@media (max-height: 23.75em) {
+			#navBar > a:nth-of-type(8) { /*Account*/
 				display: none;
-				left: 24rem; top: 12rem;
-				margin: 0;
+				left: 24rem; bottom: 0;
 				border-radius: 0 2rem 1rem 0;
-			} /*Lang*/
-			#checkArrow:checked ~ a:nth-of-type(4) {
 				position: fixed;
+			}
+			#checkArrow:checked ~ a:nth-of-type(8) {
 				display: block;
 			}
 			#navBar > a:nth-of-type(6), #navBar > a:nth-of-type(7) {
-				top: 12rem;
+				bottom: 0;
 				border-radius: 0;
 			}
-			#checkLang:checked ~ #langSelect {
-				top: 8rem;
-			}
-			#checkLang:checked ~ a:nth-of-type(4) {
-				border-radius: 0 0 1rem 0;
-			}
-			@media (max-height: 20rem) {
-				#navBar > a:nth-of-type(8) {
+			@media (max-height: 20em) {
+				#navBar > a:nth-of-type(4) { /*Lang*/
 					display: none;
-					left: 32rem; top: 12em;
-					margin: 0;
+					left: 32rem; bottom: 0;
 					border-radius: 0 2rem 1rem 0;
-				} /*Account*/
-				#checkArrow:checked ~ a:nth-of-type(8) {
 					position: fixed;
+				}
+				#checkArrow:checked ~ a:nth-of-type(4) {
 					display: block;
 				}
-				#navBar > a:nth-of-type(4), #checkLang:checked ~ a:nth-of-type(4) {
+				#navBar > a:nth-of-type(8), #checkLang:checked ~ a:nth-of-type(8) {
 					border-radius: 0;
 				}
 				#checkLang:checked ~ #langSelect {
+					bottom: 3rem;
 					border-radius: 0 2rem 0 0;
 				}
+				#checkLang:checked ~ a:nth-of-type(4) {
+					border-radius: 0 0 1rem 0;
+				}
+			}
+		}
+	}
+	@media (hover: hover) {
+		#navBar {
+			overflow: hidden;
+			&:not(:hover) {
+				flex-basis: 0;
 			}
 		}
 	}
 }
 @media (orientation: portrait) {
-	body {
-		padding-bottom: 4rem;
-	}
 	#navBar {
-		height: 4rem; width: 100vw;
-		display: flex;
-	}
-	nav a {
-		height: 4rem; min-width: 4rem; max-width: 8rem;
-		flex: 1 0 4rem;
-		padding: .5rem;
-		text-align: center;
-		&:first-of-type {
-			flex: 0 0 8rem;
-		}
-		i {
-			font-size: 1.5rem; line-height: 1.75rem;
-		}
-		p {
-			font-size: 1rem; line-height: 1.25rem;
+		flex-basis: 4rem; width: 100%;
+		a {
+			height: 4rem; min-width: 4rem; max-width: 8rem;
+			flex: 1 0 4rem;
+			padding: .5rem;
+			text-align: center;
+			&:first-of-type {
+				flex: 0 0 8rem;
+			}
+			i {
+				font-size: 1.5rem; line-height: 1.75rem;
+			}
+			p {
+				font-size: 1rem; line-height: 1.25rem;
+			}
 		}
 	} 
 	#navArrow {
-		flex: 0 0 0;
-		min-width: 0;
-		padding: 0;
 		i:first-child {
 			display: none;
 		}
@@ -251,13 +229,9 @@ nav {
 		flex: 0 0 25%;
 	}
 	
-	@media (min-width: 56rem) {
+	@media (min-width: 70rem) {
 		nav a {
 			flex: 0 0 8rem;
-		}
-		#navArrow {
-			flex: 1 0 0;
-			max-width: calc(100vh - 25.5rem);
 		}
 		#checkLang:checked ~ #langSelect {
 			left: 8rem; right: auto;
@@ -265,34 +239,46 @@ nav {
 		}
 	}
 	
-	@media (max-width: 32rem) {
-		#navArrow { visibility: visible; flex: 1 0 4rem; padding: .5rem; }
-		#navBar > a:nth-of-type(6) {
-			display: none;
-			right: 0;
-			width: 5rem;
+	@media (max-width: 40rem) {
+		#navBar {
+			&::before {
+				display: none;
+			}
+			#navArrow {
+				display: block;
+			}
+			& > a:nth-of-type(6),
+			& > a:nth-of-type(7) {
+				display: none;
+				bottom: 4rem;
+				width: calc((100vw - 8rem) / 5);
+			}
+			& > a:nth-of-type(7) {
+				bottom: 8rem;
+			}
 		}
-		#navBar > a:nth-of-type(7) {
-			display: none;
-			right: 5rem;
-			width: 5rem;
-		}
-		#checkArrow:checked ~ a:nth-of-type(6), #checkArrow:checked ~ a:nth-of-type(7) {
-			position: fixed; bottom: 4rem;
+		#checkArrow:checked ~ a:nth-of-type(6),
+		#checkArrow:checked ~ a:nth-of-type(7) {
+			position: fixed; right: calc((100vw - 8rem) / 5);
 			display: block;
 		}
 		#checkLang:checked ~ #langSelect {
 			right: 10rem;
 			width: 20rem;
 		}
-		@media (max-width: 28rem) {
-			#navBar > a:nth-of-type(4) {
+		@media (max-width: 35rem) {
+			#navBar > a:nth-of-type(8) {
 				display: none;
-				right: 10rem; bottom: 4rem;
-				width: 5rem;
-			}
-			#checkArrow:checked ~ a:nth-of-type(4) {
+				right: 0; bottom: 12rem;
+				width: calc((100vw - 8rem) / 4);
 				position: fixed;
+			}
+			#checkArrow:checked ~ a:nth-of-type(6),
+			#checkArrow:checked ~ a:nth-of-type(7) {
+				right: 0;
+				width: calc((100vw - 8rem) / 4);
+			}
+			#checkArrow:checked ~ a:nth-of-type(8),  {
 				display: block;
 			}
 			#checkLang:checked ~ #langSelect {
@@ -302,14 +288,21 @@ nav {
 				visibility: hidden;
 			}
 						
-			@media (max-width: 24rem) {
-				#navBar > a:nth-of-type(8) {
+			@media (max-width: 30rem) {
+				#navBar > a:nth-of-type(4) {
 					display: none;
-					right: 15rem; bottom: 4rem;
-					width: 5rem;
+					right: 0; bottom: 16rem;
+					width: calc((100vw - 8rem) / 3);
+					position: fixed;
+					border-radius: 2rem 1rem 0 0;
 				}
+				#checkArrow:checked ~ a:nth-of-type(6),
+				#checkArrow:checked ~ a:nth-of-type(7),
 				#checkArrow:checked ~ a:nth-of-type(8) {
-					position: fixed; display: block;
+					width: calc((100vw - 8rem) / 3);
+				}
+				#checkArrow:checked ~ a:nth-of-type(4) {
+					display: block;
 				}
 			}
 		}

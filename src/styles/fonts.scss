@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-/**********************************
-	FONT-faces for Make it Edible
+/*******************************
+	Fonts for Chemi Gastro
 			by stanik123
- ***********************************/
+ *******************************/
 
 @font-face {
 	font-family: BloggerSans;
@@ -95,7 +95,6 @@
 	text-rendering: optimizeLegibility;
 }
 
-
 @font-face {
 	font-family: FA;
 	src:url('fonts/fa-brands-400.woff2') format('woff2'),
@@ -119,6 +118,30 @@
 		url('fonts/fa-solid-900.ttf') format('truetype');
 	font-weight: 900;
 	text-rendering: optimizeLegibility;
+}
+
+/* Font */
+:root {
+	font: 1.25em normal BloggerSans, sans-serif;
+	color: var(--text);
+	/*@media (min-width: 40em) {
+		font-size: 1em;
+	}
+	@media (min-width: 60em) {
+		font-size: 1.25em;
+	}
+	@media (min-width: 80em) {
+		font-size: 1.625em;
+	}
+	@media (min-width: 120em) {
+		font-size: 2em;
+	}*/
+}
+h1 {
+	font-family: PatrickHandSC, serif;
+}
+h2, h3, h4, h5, h6, #logoText, nav a {
+	font-family: PatrickHand, serif;
 }
 i {
 	font-family: FA;

@@ -1,7 +1,7 @@
-/**********************************
-	FONT-faces for Make it Edible
+/*******************************
+	Fonts for Chemi Gastro
 			by stanik123
- ***********************************/
+ *******************************/
 @font-face {
   font-family: BloggerSans;
   src: url("fonts/BloggerSans-Normal.woff2") format("woff2"), url("fonts/BloggerSans-Normal.woff") format("woff"), url("fonts/BloggerSans-Normal.ttf") format("truetype"); /* Most Browsers */
@@ -88,10 +88,36 @@
   font-weight: 900;
   text-rendering: optimizeLegibility;
 }
+/* Font */
+:root {
+  font: 1.25em normal BloggerSans, sans-serif;
+  color: var(--text);
+  /*@media (min-width: 40em) {
+  	font-size: 1em;
+  }
+  @media (min-width: 60em) {
+  	font-size: 1.25em;
+  }
+  @media (min-width: 80em) {
+  	font-size: 1.625em;
+  }
+  @media (min-width: 120em) {
+  	font-size: 2em;
+  }*/
+}
+
+h1 {
+  font-family: PatrickHandSC, serif;
+}
+
+h2, h3, h4, h5, h6, #logoText, nav a {
+  font-family: PatrickHand, serif;
+}
+
 i {
   font-family: FA;
   font-style: normal;
   font-weight: 900;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/styles/fonts.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;EACC;EACA,yKAEyD;EACzD;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAGD;EACC;EACA;EAGA;EACA;;AAED;EACC;EACA;EAGA;EACA;;AAID;EACC;EACA;EAGA;EACA;;AAED;EACC;EACA;EAGA;EACA;;AAED;EACC;EACA;EAGA;EACA;;AAED;EACC;EACA;EACA%22,%22file%22:%22fonts.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/styles/fonts.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;EACC;EACA,yKAEyD;EACzD;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAED;EACC;EACA;EAGA;EACA;EACA;;AAGD;EACC;EACA;EAGA;EACA;;AAED;EACC;EACA;EAGA;EACA;;AAGD;EACC;EACA;EAGA;EACA;;AAED;EACC;EACA;EAGA;EACA;;AAED;EACC;EACA;EAGA;EACA;;AAGD;AACA;EACC;EACA;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAaD;EACC;;;AAED;EACC;;;AAED;EACC;EACA;EACA%22,%22file%22:%22fonts.css%22%7D */

@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="512" height="512" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <g stroke="#000" stroke-width="10">
     <path d="m416 224c42.638 37.916 20 170 20 170s20.725 2.1082 25 10c4.0478 7.4724-5 25-5 25s-33.363 3.0596-50 5c-50.103 5.8437-99.558 20-150 20s-99.897-14.156-150-20c-16.637-1.9404-50-5-50-5s-9.0478-17.528-5-25c4.275-7.8918 25-10 25-10s-22.638-132.08 20-170c79.709-70.882 240.29-70.882 320 0z" fill="#952" stroke-linecap="round" stroke-linejoin="round" style="paint-order:normal"/>

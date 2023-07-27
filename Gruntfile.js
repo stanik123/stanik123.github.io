@@ -111,10 +111,10 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			bake: {
-				files: ["src/**/*.html", "!*includes*"],
+				files: ["src/**/*.html", "!*/includes/*"],
 				tasks: "newer:bake"
 			},
-			bake: {
+			bakeIncludes: {
             	files: ["src/*/includes/*.html"],
             	tasks: "bake"
             },
