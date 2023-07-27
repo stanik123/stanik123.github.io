@@ -3,7 +3,7 @@
 <head>
 	<base href="../">
 
-	<!--(bake /src/cz/includes/head_defaults.html)-->
+	<!--(bake includes/head_defaults.html)-->
 
 	<title>Novinky - Chemi Gastro</title>
 	<meta property="og:title" content="Novinky - Chemi Gastro">
@@ -15,26 +15,24 @@
 	<meta property="og:image:type" content="image/webp">
 </head>
 <body>
-<!--(bake /src/cz/includes/header.html)-->
-<main>
-	<header>
-		<img src="images/news.webp" alt="Fotka z molekulární kuchyně">
-		<h1>Novinky</h1>
-	</header>
+	<!--(bake includes/nav.html)-->
+	<main>
+		<img src="images/news.webp" alt="Fotka z molekulární kuchyně" id="backgroundImg">
+		<header>
+			<h1>Novinky</h1>
+		</header>
 
+		<article>
+			<h2> </h2>
+			<p> </p>
+		</article>
 
-	<article>
-		<h2> </h2>
-		<p> </p>
-	</article>
+		<section>
+			<p> </p>
+		</section>
 
-
-	<section>
-		<p> </p>
-	</section>
-
-	<!--(bake /src/cz/includes/footer.html)-->
-</main>
-<script src="scripts/scripts.js"></script>
+		<!--(bake includes/footer.html)-->
+	</main>
+	<script src="scripts/scripts.js"></script>
 </body>
 </html>
