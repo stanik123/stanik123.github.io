@@ -13,13 +13,12 @@
 	margin-block: 0;
 	margin-inline: 0;
 	box-sizing: border-box;
-	--phi: calc((#{math.sqrt(5)} + 1)/2);
-
 }
 :root, body {
 	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
+	height: 100%;
+	overflow-x: hidden;
+	--phi: calc((#{math.sqrt(5)} + 1)/2);
 }
 
 body {
@@ -54,12 +53,8 @@ header {
 	flex: 0 0 100vh;
 }
 
-article, #comments, footer {
+article, #comments {
 	flex-grow: 1;
-	padding: 3em 2em;
-	@media (max-width: 40em) {
-		padding: 2em 1em;
-	}
 }
 
 footer {

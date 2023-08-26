@@ -2,14 +2,9 @@
 	NAVBAR for Chemi Gastro
 			by stanik123
  ********************************/
-/* Transition */
-#navBar, #navBar * {
-  transition: all 1s ease-out 0.1s;
-}
-
-/* Text & Colors */
+/* Text & Colors & Transition */
 #navBar {
-  background: var(--green);
+  background-color: var(--green);
 }
 #navBar a {
   text-decoration: none;
@@ -18,6 +13,9 @@
 }
 #navBar a:hover {
   background-color: var(--dark-green);
+}
+#navBar, #navBar * {
+  transition: all 1s ease-out 0.1s;
 }
 
 /* Layout */
@@ -43,7 +41,7 @@
 #navBar a svg {
   height: 3rem;
 }
-#navBar::before {
+#navBar::before { /* Divider - move last 3 item to end */
   content: "";
   display: block;
   flex: 1 1 0;
@@ -51,6 +49,9 @@
 }
 #navBar #navArrow {
   display: none;
+}
+
+#navArrow, #navBar > a:nth-of-type(6), #navBar > a:nth-of-type(7), #navBar > a:nth-of-type(8) {
   order: 2;
 }
 
@@ -60,35 +61,34 @@
 }
 #langSelect a img {
   display: block;
-  height: 2rem;
-  margin: 0.5rem auto;
+  height: 1.5rem;
+  margin: 0.75rem auto;
 }
 
 #checkLang:checked ~ #langSelect {
   display: flex;
 }
 
-#navBar > a:nth-of-type(6), #navBar > a:nth-of-type(7), #navBar > a:nth-of-type(8) {
-  order: 2;
-}
-
 @media (orientation: landscape) {
   #navBar {
-    height: 100vh;
+    height: 100%;
     flex: 0 0 8rem;
     flex-direction: column;
   }
-  #navBar a {
+  #navBar > a {
+    text-align: left;
     height: 3rem;
     width: 8rem;
-    text-align: left;
     padding: 0 0.75rem;
   }
-  #navBar a:first-of-type {
+  #navBar > a:first-of-type {
     height: 4rem;
     padding: 0.5rem 0.75rem;
   }
-  #navBar a i {
+  #navBar > a:first-of-type svg {
+    margin-left: 0.125rem;
+  }
+  #navBar > a i {
     display: inline-block;
     float: left;
     width: 2.5rem;
@@ -100,18 +100,15 @@
     /*border-radius: 50%;
     background: rgba(0, 0, 0, 0.5);*/
   }
-  #navBar a p {
+  #navBar > a p {
     display: inline-block;
     float: left;
     width: 4rem;
     height: 3rem;
     line-height: 3rem;
-    margin-left: 0; /*.25rem;*/
+    /*margin-left: .25rem;*/
     overflow: hidden;
     font-size: 1.2rem;
-  }
-  #navBar svg {
-    margin-left: 0.125rem;
   }
   /*#logoText {
   	transform: scaleX(1);
@@ -124,13 +121,15 @@
     top: 10rem;
     left: 8rem;
     height: 3rem;
-    width: 27.6rem;
+    width: 20rem;
     border-radius: 0 1rem 1rem 0;
   }
-  #langSelect a {
+  #langSelect > a {
     flex-basis: 25%;
+    height: 3rem;
+    text-align: center;
   }
-  #langSelect a:last-child {
+  #langSelect > a:last-child {
     border-radius: 0 1rem 1rem 0;
   }
 }
@@ -217,6 +216,7 @@
   }
   #navBar a:first-of-type {
     flex: 0 0 8rem;
+    width: 8rem;
   }
   #navBar a i {
     font-size: 1.5rem;
@@ -321,4 +321,4 @@
   }
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/styles/nav.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;AAEA;EACC;;;AAGD;AACA;EACC;;AACA;EACC;EACA;EACA;;AACA;EACC;;;AAKH;AACA;EACC;EACA;;AACA;EACC;;AAED;EACC;EAAU;;AAEX;EACC;;AACA;EACC;EAAa;EACb;;AAED;EACC;;AAGF;EACC;EACA;EACA;EACA;;AAED;EACC;EACA;;;AAGF;EACC;EACA;;AACA;EACC;EACA;EACA;;;AAGF;EACC;;;AAGD;EACC;;;AAMD;EACC;IACC;IAAe;IACf;;EACA;IACC;IAAc;IACd;IACA;;EACA;IACC;IACA;;EAED;IACC;IAAuB;IACvB;IAAe;IACf;IAAqB;IACrB;IACA;AACA;AAAA;;EAGD;IACC;IAAuB;IACvB;IAAa;IAAc;IAC3B;IACA;IACA;;EAGF;IACC;;AAGF;AAAA;AAAA;AAAA;EAKC;IACC;;EAIF;IACC;IAAY;IACZ;IAAc;IACd;;EACA;IACC;;EACA;IACC;;;AAIH;EAEE;IACC;IACA;;EAED;IACC;IACA;IAAY;IACZ;;EAED;IACC;IACA;IAAa;IACb;;EAGF;IACC;IACA;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;;EAED;IACC;;EAED;IACC;IACA;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;;EAED;IACC;;EAED;IACC;;EAED;IACC;IACA;;EAED;IACC;;;AAKJ;EACC;IACC;;EACA;IACC;;;AAKJ;EACC;IACC;IAAkB;;EAClB;IACC;IAAc;IAAiB;IAC/B;IACA;IACA;;EACA;IACC;;EAED;IACC;IAAmB;;EAEpB;IACC;IAAiB;;EAKnB;IACC;;EAGF;IACC;IAAe;IACf;IAAiB;IAAa;IAC9B;IAAc;;EAEf;IACC;;;AAGD;EACC;IACC;;EAED;IACC;IAAY;IACZ;;;AAIF;EAEE;IACC;;EAED;IACC;;EAED;IAEC;IACA;IACA;;EAED;IACC;;EAGF;AAAA;IAEC;IAAiB;IACjB;;EAED;IACC;IACA;;;AAED;EACC;IACC;IACA;IAAU;IACV;IACA;;EAED;AAAA;IAEC;IACA;;EAED;IACC;;EAED;IACC;IAAc;;EAEf;IACC;;;AAGD;EACC;IACC;IACA;IAAU;IACV;IACA;IACA;;EAED;AAAA;AAAA;IAGC;;EAED;IACC%22,%22file%22:%22nav.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/styles/nav.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AAAA;AAAA;AAAA;AAKA;AACA;EACC;;AACA;EACC;EACA;EACA;;AACA;EACC;;AAGF;EACC;;;AAIF;AACA;EACC;EACA;;AACA;EACC;;AAED;EACC;EAAU;;AAEX;EACC;;AACA;EACC;EAAa;EACb;;AAED;EACC;;AAGF;EACC;EACA;EACA;EACA;;AAED;EACC;;;AAGF;EACC;;;AAED;EACC;EACA;;AACA;EACC;EACA;EACA;;;AAGF;EACC;;;AAGD;EACC;IACC;IAAc;IACd;;EACA;IACC;IACA;IAAc;IACd;;EACA;IACC;IACA;;EACA;IACC;;EAGF;IACC;IACA;IACA;IAAe;IACf;IAAqB;IACrB;IACA;AACA;AAAA;;EAGD;IACC;IACA;IACA;IAAa;IACb;AACA;IACA;IACA;;AAIH;AAAA;AAAA;AAAA;EAIA;IACC;;EAED;IACC;IAAY;IACZ;IAAc;IACd;;EACA;IACC;IACA;IACA;;EACA;IACC;;;AAIH;EAEE;IACC;IACA;;EAED;IACC;IACA;IAAY;IACZ;;EAED;IACC;IACA;IAAa;IACb;;EAGF;IACC;IACA;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;;EAED;IACC;;EAED;IACC;IACA;;;AAED;EACC;IACC;IACA;IAAa;IACb;IACA;;EAED;IACC;;EAED;IACC;;EAED;IACC;IACA;;EAED;IACC;;;AAKJ;EACC;IACC;;EACA;IACC;;;AAKJ;EACC;IACC;IAAkB;;EAClB;IACC;IAAc;IAAiB;IAC/B;IACA;IACA;;EACA;IACC;IACA;;EAED;IACC;IAAmB;;EAEpB;IACC;IAAiB;;EAKnB;IACC;;EAGF;IACC;IAAe;IACf;IAAiB;IAAa;IAC9B;IAAc;;EAEf;IACC;;;AAGD;EACC;IACC;;EAED;IACC;IAAY;IACZ;;;AAIF;EAEE;IACC;;EAED;IACC;;EAED;IAEC;IACA;IACA;;EAED;IACC;;EAGF;AAAA;IAEC;IAAiB;IACjB;;EAED;IACC;IACA;;;AAED;EACC;IACC;IACA;IAAU;IACV;IACA;;EAED;AAAA;IAEC;IACA;;EAED;IACC;;EAED;IACC;IAAc;;EAEf;IACC;;;AAGD;EACC;IACC;IACA;IAAU;IACV;IACA;IACA;;EAED;AAAA;AAAA;IAGC;;EAED;IACC%22,%22file%22:%22nav.css%22%7D */

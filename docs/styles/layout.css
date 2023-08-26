@@ -9,13 +9,13 @@
   margin-block: 0;
   margin-inline: 0;
   box-sizing: border-box;
-  --phi: calc((2.2360679775 + 1)/2);
 }
 
 :root, body {
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
+  overflow-x: hidden;
+  --phi: calc((2.2360679775 + 1)/2);
 }
 
 body {
@@ -54,18 +54,12 @@ header {
   flex: 0 0 100vh;
 }
 
-article, #comments, footer {
+article, #comments {
   flex-grow: 1;
-  padding: 3em 2em;
-}
-@media (max-width: 40em) {
-  article, #comments, footer {
-    padding: 2em 1em;
-  }
 }
 
 footer {
   flex-grow: 0;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/styles/layout.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAGA;AAAA;AAAA;AAAA;AAKA;AACA;EACC;EACA;EACA;EACA;EACA;EACA;;;AAGD;EACC;EACA;EACA;;;AAGD;EACC;;AACA;EAFD;IAGE;;;;AAIF;EACC;;;AAED;EACC;EACA;EACA;EACA;EACA;;;AAED;EACC;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGD;EACC;EACA;;;AAGD;EACC;EACA;;AACA;EAHD;IAIE;;;;AAIF;EACC%22,%22file%22:%22layout.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/styles/layout.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAGA;AAAA;AAAA;AAAA;AAKA;AACA;EACC;EACA;EACA;EACA;EACA;;;AAED;EACC;EACA;EACA;EACA;;;AAGD;EACC;;AACA;EAFD;IAGE;;;;AAIF;EACC;;;AAED;EACC;EACA;EACA;EACA;EACA;;;AAED;EACC;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGD;EACC;EACA;;;AAGD;EACC;;;AAGD;EACC%22,%22file%22:%22layout.css%22%7D */

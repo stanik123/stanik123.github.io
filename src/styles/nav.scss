@@ -5,15 +5,9 @@
 			by stanik123
  ********************************/
 
-/* Transition */
-//nav, nav a, nav a i, nav a p, nav text, #logoText, #navBar nav, #navBar nav a {
-#navBar, #navBar * {
-	transition: all 1s ease-out .1s;
-}
-
-/* Text & Colors */
+/* Text & Colors & Transition */
 #navBar {
-	background: var(--green);
+	background-color: var(--green);
 	a {
 		text-decoration: none;
 		color: var(--text);
@@ -21,6 +15,9 @@
 		&:hover {
 			background-color: var(--dark-green);
 		}
+	}
+	&, * {
+		transition: all 1s ease-out .1s;
 	}
 }
 
@@ -44,7 +41,7 @@
 			height: 3rem;
 		}
 	}
-	&::before {
+	&::before { /* Divider - move last 3 item to end */
 		content: '';
 		display: block;
 		flex: 1 1 0;
@@ -52,43 +49,42 @@
 	}
 	#navArrow {
 		display: none;
-		order: 2;
 	}
+}
+#navArrow, #navBar > a:nth-of-type(6), #navBar > a:nth-of-type(7), #navBar > a:nth-of-type(8) {
+	order: 2;
 }
 #langSelect {
 	position: fixed;
 	display: none;
 	a img {
 		display: block;
-		height: 2rem;
-		margin: .5rem auto;
+		height: 1.5rem;
+		margin: .75rem auto;
 	}
 }
 #checkLang:checked ~ #langSelect {
 	display: flex;
 }
 
-#navBar > a:nth-of-type(6), #navBar > a:nth-of-type(7), #navBar > a:nth-of-type(8) {
-	order: 2;
-}
-
-
-
-
 @media (orientation: landscape) {
 	#navBar {
-		height: 100vh; flex: 0 0 8rem;
+		height: 100%; flex: 0 0 8rem;
 		flex-direction: column;
-		a {
-			height: 3rem; width: 8rem;
+		& > a {
 			text-align: left;
+			height: 3rem; width: 8rem;
 			padding: 0 .75rem;
 			&:first-of-type {
 				height: 4rem;
 				padding: .5rem .75rem;
+				svg {
+					margin-left: .125rem;
+				}
 			}
 			i {
-				display: inline-block; float: left;
+				display: inline-block;
+				float: left;
 				width: 2.5rem; height: 2.5rem;
 				line-height: 2.5rem; text-align: center;
 				margin-top: .25rem;
@@ -97,33 +93,31 @@
 				background: rgba(0, 0, 0, 0.5);*/
 			}
 			p {
-				display: inline-block; float: left;
-				width: 4rem; height: 3rem; line-height: 3rem;
-				margin-left: 0; /*.25rem;*/
+				display: inline-block;
+				float: left;
+				width: 4rem; height: 3rem;
+				line-height: 3rem;
+				/*margin-left: .25rem;*/
 				overflow: hidden;
 				font-size: 1.2rem;
 			}
-		}
-		svg {
-			margin-left: .125rem;
 		}
 	}
 	/*#logoText {
 		transform: scaleX(1);
 		transform-origin: 37.5%;
 	}*/
-	#navArrow {
-		i:last-child {
-			display: none;
-		}
+	#navArrow i:last-child {
+		display: none;
 	}
-
 	#langSelect {
 		top: 10rem; left: 8rem;
-		height: 3rem; width: 27.6rem;
+		height: 3rem; width: 20rem;
 		border-radius: 0 1rem 1rem 0;
-		a {
+		& > a {
 			flex-basis: 25%;
+			height: 3rem;
+			text-align: center;
 			&:last-child {
 				border-radius: 0 1rem 1rem 0;
 			}
@@ -206,6 +200,7 @@
 			text-align: center;
 			&:first-of-type {
 				flex: 0 0 8rem;
+				width: 8rem;
 			}
 			i {
 				font-size: 1.5rem; line-height: 1.75rem;

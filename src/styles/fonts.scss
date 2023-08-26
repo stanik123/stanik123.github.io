@@ -122,20 +122,16 @@
 
 /* Font */
 :root {
-	font: 1.25em normal BloggerSans, sans-serif;
+	font: normal 1.25em BloggerSans, sans-serif;
 	color: var(--text);
-	/*@media (min-width: 40em) {
-		font-size: 1em;
-	}
-	@media (min-width: 60em) {
+}
+main {
+	@media (min-width: 100em) {
 		font-size: 1.25em;
 	}
-	@media (min-width: 80em) {
-		font-size: 1.625em;
+	@media (max-width: 30em) {
+		font-size: 0.8em;
 	}
-	@media (min-width: 120em) {
-		font-size: 2em;
-	}*/
 }
 h1 {
 	font-family: PatrickHandSC, serif;
